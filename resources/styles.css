@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'poppins';
+}
+body{
+    background-color: #4D6643;
+}
+
+.page{
+    border: 1px solid black;
+    height: 977px;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+/* Home page */
+.navbar, .intro{
+    width: 1500px;
+}
+/* navbar */
+.navbar{
+    height: 100px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+   
+}
+.logo{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.img{
+    /* border: 1px solid blue; */
+    max-width: 150%;
+    position: relative;
+    top: -70px;
+    left: -30%;
+}
+.menu{
+    width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+a{
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Intro */
+.intro{
+    background-color: #C4E3B8;
+    border-radius: 20px;
+    height: 680px;
+    z-index: 2;
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+}
+
+/* Experiences */
+.page.experiences{
+    background-color: #749965;
+}
