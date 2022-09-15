@@ -7,18 +7,24 @@ body{
     background-color: #4D6643;
 }
 
-.page{
-    border: 1px solid black;
-    height: 977px;
+.wrapper{
+    position: relative;
+    /* border: 4px solid black; */
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
     
 }
 
-.container{
+.page{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    transform-style: preserve-3d;
+    z-index: -1;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 /* Home page */
 .navbar, .intro{
@@ -30,7 +36,6 @@ body{
     /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
-   
 }
 .logo{
     width: 10%;
@@ -56,18 +61,49 @@ a{
     margin-left: 25px;
     text-decoration: none;
     color: white;
+    transition: font-size 1s;
+}
+a:hover{
+    font-size: 2rem;
 }
 
 /* Intro */
 .intro{
-    background-color: #C4E3B8;
+    /* position: absolute; */
+    /* background-color: #C4E3B8; */
     border-radius: 20px;
-    height: 680px;
-    z-index: 2;
-    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    height:80%;
+    
 }
 
+span, .desc{
+    color: white;
+    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+}
+span{
+  font-size: 8rem;
+  
+}
+.desc{
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    text-align: right;
+   
+
+}
+
+/* Socials */
+
+
+
+
 /* Experiences */
-.page.experiences{
-    background-color: #749965;
+.experience{
+    background-color: #C4E3B8;
+    border: 1px solid blue;
 }
