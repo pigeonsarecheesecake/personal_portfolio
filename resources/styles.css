@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    
     font-family: 'poppins';
 }
 body{
@@ -43,6 +44,7 @@ body{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
+    background-color: #1f3019;
 }
 .logo{
     width: 10%;
@@ -65,13 +67,13 @@ body{
     align-items: center;
 }
 
-a{
+.menu > a{
     margin-left: 25px;
     text-decoration: none;
     color: white;
     transition: font-size 1s ;
 }
-a:hover{
+.menu > a:hover{
     font-size: 2rem;
 }
 
@@ -83,39 +85,105 @@ a:hover{
     /* position: absolute; */
     /* background-color: #C4E3B8; */
     border-radius: 20px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     justify-content: center;
-    align-items: end;
     flex-direction: column;
     height:80%;
     transform: translatez(-50px) scale(2);
 }
-
+/* Socials */
 .socials{
-    border: 1px solid black;
-    align-self: flex-start;
+    border: 1px solid blue;
+    align-self: flex-end;
     height: 10% ;
     width: 20%;
 }
+.socials > a{
+    text-decoration: none;
+}
+svg{
+    color: black;
+    transition: color .5s;
+    border: 1px solid black;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+}
 
+svg:hover{
+    color: white;
+    
+}
+
+/* Hi there */
 span, .desc{
     color: white;
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
 }
-span{
+span, .desc{
   font-size: 8rem;
-  
+  opacity: 0;
+  animation-name: appears;
+  animation-duration: 2.5s;
+  animation-fill-mode:forwards;
 }
+
+span{
+    font-size: 8rem;
+}
+
+@keyframes appears{
+    100%{
+      opacity:1;
+    }
+}
+
+#h{
+    animation-delay: 1s;
+}
+
+#i{
+    animation-delay: 1.2s;
+}
+
+#comma{
+    animation-delay: 1.3s;
+}
+
+#t{
+    animation-delay: 1.5s;
+}
+
+#h2{
+    animation-delay: 1.6s;
+}
+
+#e{
+    animation-delay: 1.7s;
+}
+
+#r{
+    animation-delay: 1.8s;
+}
+
+#e2{
+    animation-delay: 1.9s;
+}
+
+#exclamation{
+    animation-delay: 2.2s;
+}
+
+
+/* Desctiption */
 .desc{
     /* border: 1px solid red; */
     font-size: 2rem;
-    text-align: right;
+    animation-delay: 3s;
    
-
 }
 
-/* Socials */
 
 
 
@@ -123,5 +191,8 @@ span{
 /* Experiences */
 .experience{
     background-color: #a5c09b;
+    
     /* border: 1px solid blue; */
 }
+
+
