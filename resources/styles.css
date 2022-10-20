@@ -1,29 +1,29 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    
     font-family: 'poppins';
 }
+
 body{
     background-color: #1f3019;
-    
-    
 }
 
 a{
     text-decoration: none;
 }
 
+/* Wrapper for Parallax effect */
+
 .wrapper{
-    position: relative;
     /* border: 4px solid white; */
+    position: relative;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 50px;
-    
 }
 
+/* Page */
 .page{
     display: flex;
     flex-direction: column;
@@ -33,31 +33,35 @@ a{
     height: 100%;
     /* border: 1px solid red; */
 }
+
 /* Home page */
 .navbar, .intro{
     width: 1500px;
-
 }
+
 /* navbar */
 .navbar{
-    backdrop-filter: blur(5px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    height: 120px;
-    width: 100%;
     /* border: 1px solid blue; */
+    backdrop-filter: blur(2px);
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    height: 7.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    
+    animation: drops 4s  forwards;
 }
+
+
+/* Logo */
 .logo{
+    /* border: 1px solid red; */
     width: 10%;
     height: 100%;
-    /* border: 1px solid red; */
-
 }
+
 .img{
     /* border: 1px solid blue; */
     max-width: 100%;
@@ -65,9 +69,10 @@ a{
     top: -30px;
     left: -30%;
 }
+
 .menu{
-    width: 50%;
     /* border: 1px solid black; */
+    width: 50%;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -79,58 +84,21 @@ a{
     color:white;
     transition: font-size 1s ;
 }
+
 .menu > a:hover{
     font-size: 2rem;
 }
 
 
-
-
 /* Intro */
 .intro{
-    /* position: absolute; */
-    /* background-color: #C4E3B8; */
-    border-radius: 20px;
     /* border: 1px solid purple; */
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height:80%;
     transform: translatez(-50px) scale(2);
-}
-
-
-/* Customizing the svg, replaced fill in the html svg tag with currentcolor */
-svg{
-    color: white;
-}
-
-svg, .resume {
-    transition: color .5s;
-    /* border: 1px solid black; */
-    border-radius:100%;
-    height: 5rem;
-    width: 5rem;
-}
-
-svg:hover{
-    color: black;
-}
-
-/* Resume */
-.resume {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #1f3019 ;
-    background-color: white;
-    transition: background-color .5s, color .5s;
-}
-
-.resume:hover{
-    background-color: black;
-    color: white;
 }
 
 /* Hi there */
@@ -139,15 +107,14 @@ span, .desc{
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
 }
 
-span, .desc{
-  font-size: 8rem;
+span, .desc,.navbar{
   opacity: 0;
   animation-name: appears;
   animation-duration: 2.5s;
   animation-fill-mode:forwards;
 }
 
-span{
+.hello > span{
     font-size: 8rem;
 }
 
@@ -193,28 +160,19 @@ span{
     animation-delay: 2.2s;
 }
 
-/* Socials */
-.socials{
-    /* border: 1px solid blue; */
-    align-self: flex-end;
-    /* border: 10px solid black; */
-    display: flex;
-    border-radius: 50px;
-    backdrop-filter: blur(10px);
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
-    animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
-    width: 7rem;
-    height: 7rem;
-    opacity: 0;
-   
+/* Description */
+.desc{
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    animation-delay: 3.5s;
 }
 
-@keyframes wexpand{
-    100%{
-        width:21rem;
-    }
+.navbar{
+    /* animation-delay: 5s; */
 }
 
+
+/* Animation to make the social medias move to the left */
 .socials > a{
     display: flex;
     border-radius: 100%;
@@ -223,30 +181,79 @@ span{
     right: 0;
 }
 
+/* Resume */
 .res{
     animation: moveEnd 2.5s 4s forwards;
 }
+/* LinkedIn */
 .li{
     animation: moveMiddle 2.5s 4s forwards;
 }
+
 @keyframes moveMiddle{
     100%{
         transform: translateX(-7rem);
     }
 }
+
 @keyframes moveEnd{
     100%{
         transform: translateX(-14rem);
     }
 }
 
+/* Socials Container */
+.socials{
+    /* border: 1px solid blue; */
+    align-self: flex-end;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    width: 7rem;
+    height: 7rem;
+    opacity: 0;
+}
+/* Expands the container */
+@keyframes wexpand{
+    100%{
+        width:21rem;
+    }
+}
 
-/* Desctiption */
-.desc{
-    /* border: 1px solid red; */
-    font-size: 2rem;
-    animation-delay: 3.5s;
-   
+/* Customizing the svg, replaced fill in the html svg tag with currentcolor */
+svg{
+    color: white;
+}
+
+svg, .resume{
+    /* border: 1px solid black; */
+    transition: color .5s;
+    border-radius:100%;
+    height: 5rem;
+    width: 5rem;
+}
+
+svg:hover{
+    color: black;
+}
+
+
+
+/* Resume */
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #1f3019 ;
+    background-color: white;
+    transition: background-color .5s, color .5s;
+}
+
+.resume:hover{
+    background-color: black;
+    color: white;
 }
 
 
@@ -256,8 +263,49 @@ span{
 /* Experiences */
 .experience{
     background-color: #4D6643;
-    
-    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid blue;
 }
 
 
+.title{
+    font-size: 3rem;
+    align-self: end;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+/* Timeline */
+.timeline{
+    height: 60%;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-container{
+    border: 1px solid red;
+    height: 100%;
+    width: 80%;
+}
+.line{
+    /* border: 1px solid black; */
+    height: 1.5%;
+    width: 2%;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    position: relative;
+    top: 50%;
+    animation: stretch 2.5s forwards;
+}
+@keyframes stretch{
+    to{
+        width: 100%;
+    }
+}
+/* Projects */
+.projects{
+     
+}
