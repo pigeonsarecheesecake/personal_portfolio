@@ -260,7 +260,7 @@ svg:hover{
 
 
 
-/* Experiences */
+/* Experiences Page*/
 .experience{
     background-color: #4D6643;
     display: flex;
@@ -276,59 +276,33 @@ svg:hover{
     border: 1px solid white;
     margin-right: 1rem;
 }
-/* Timeline */
-.timeline{
+
+/* Experiences Page Main Content*/
+.main-content{
     height: 60%;
     width: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    display: flex;
+}
+
+.year{
+    height: 100%;
+    width: 10%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
 }
+
+/* Timeline Container */
 .timeline-container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100%;
     width: 80%;
     position: relative;
 }
-.timelines{
-    position: absolute;
-    border: 3px solid blue;
-    height: 100%;
-    width: 100%;
-    top:0;
-    display: flex;
-    flex-direction: column;
 
-}
-/* Top and bottom containers */
-.top, .bottom{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.top{
-    border: 1px solid yellow;
-    align-items: end;
-}
-.bottom{
-    border: 1px solid black;
-}
-/* time branches */
-.line{
-    /* border: 1px solid purple; */
-    background-color: #D9D9D9;
-    width: 1%;
-    height: 1%;
-    opacity: 0;
-    animation: stretchUp 2s 2s linear forwards, appears 1s 2s linear forwards;
-}
-
-@keyframes stretchUp{
-    to{
-        height: 20%;
-    }
-}
 /* Middle or main line */
 .line-main{
     /* border: 1px solid black; */
@@ -340,14 +314,58 @@ svg:hover{
     top: 49%;
     animation: stretch 2.5s forwards;
 }
-.year{
+
+/* Timeline-Branches */
+.timelines{
+    position: absolute;
+    border: 3px solid blue;
     height: 100%;
-    width: 10%;
+    width: 100%;
+    top:0;
+}
+
+/* Top and bottom containers of Timelines */
+.top, .bottom{
+    border: 1px solid yellow;
+    height: 50%;
+}
+
+.top-one, .top-two, .bottom-one, .bottom-two{
+    height: 50%;
+    border: 1px solid white;
+}
+
+/* Containers for .lines */
+.top-one, .bottom-two{
+    height: 80%;
+}
+.top-two, .bottom-one{
+    border: 1px solid red;
+    height: 20%;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
+    justify-content: space-around;
+}
+
+.top-two{
+    align-items: flex-end;
+}
+
+/* .lines */
+.line{
+    border: 1px solid purple;
+    background-color: #D9D9D9;
+    width: 1%;
+    height: 20%;
+    opacity: 0;
+    animation: stretchUp 2s 2s linear forwards, appears 1s 2s linear forwards;
+}
+
+/* Animations */
+@keyframes stretchUp{
+    to{
+        height: 100%;
+    }
 }
 
 @keyframes stretch{
@@ -355,6 +373,8 @@ svg:hover{
         width: 100%;
     }
 }
+
+
 /* Projects */
 .projects{
      
