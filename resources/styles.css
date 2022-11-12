@@ -273,7 +273,7 @@ svg:hover{
 .title{
     font-size: 3rem;
     align-self: end;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin-right: 1rem;
 }
 
@@ -306,19 +306,20 @@ svg:hover{
 /* Middle or main line */
 .line-main{
     /* border: 1px solid black; */
-    height: 2%;
+    height: 5%;
     width: 2%;
-    background-color: #D9D9D9;
+    background-color: white;
     border-radius: 50px;
     position: relative;
-    top: 49%;
+    top: 48%;
     animation: stretch 2.5s forwards;
+    /* box-shadow: -3px 10px 10px rgba(0,0,0,0.2); */
 }
 
 /* Timeline-Branches */
 .timelines{
     position: absolute;
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     height: 100%;
     width: 100%;
     top:0;
@@ -326,21 +327,26 @@ svg:hover{
 
 /* Top and bottom containers of Timelines */
 .top, .bottom{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     height: 50%;
+    width: 100%;
 }
 
 .top-one, .top-two, .bottom-one, .bottom-two{
     height: 50%;
-    border: 1px solid white;
+    width: 100%;
+    /* border: 1px solid white; */
 }
 
 /* Containers for .lines */
 .top-one, .bottom-two{
     height: 80%;
+    display: flex;
+    justify-content: space-around;
 }
+
 .top-two, .bottom-one{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 20%;
     width: 100%;
     display: flex;
@@ -353,14 +359,76 @@ svg:hover{
 
 /* .lines */
 .line{
-    border: 1px solid purple;
-    background-color: #D9D9D9;
-    width: 1%;
-    height: 20%;
-    opacity: 0;
-    animation: stretchUp 2s 2s linear forwards, appears 1s 2s linear forwards;
+    /* border: 1px solid purple; */
+    background-color: white;
+    /* border-radius: 10px; */
+    width: 2%;
+    height: 150%;
+    /* opacity: 0; */
+    /* animation: stretchUp 2s 2s linear forwards, appears 1s 2s linear forwards; */
+}
+/* Info */
+.info{
+    width: 30%;
+    height: 100%;
+    color: 6E260E;
+    /* border: 1px solid white; */
 }
 
+/* Clip Path */
+.circle-clip{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(8% at 50% 88.5%);
+  transition: clip-path 1s;
+  border-radius: 30px;
+}
+p{
+    text-align: center;
+}
+
+.info-content{
+    /* border: 1px solid red; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 77%;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.info-content > h3{
+    color: white;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #4D6643;
+}
+.circle-clip:hover{
+    clip-path: circle(100%) ;
+}
+
+
+/* Company Logo */
+.company{
+    /* border: 1px solid black; */
+    width: 8%;
+    height: 16%;
+    border-radius: 20px;
+}
+.company{
+    background-image: url(images/Walgreens_W.png)  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Animations */
 @keyframes stretchUp{
     to{
