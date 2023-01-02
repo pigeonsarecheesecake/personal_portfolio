@@ -1,13 +1,18 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'poppins';
-    color: white;
-    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
 }
-
+a{
+    font-weight: 600;
+}
+h1{
+    font-weight: 300;
+    font-size: 4rem;
+}
 body{
-    background-color: #1f3019;
+    background-color: #473757;
+    color: white;
 }
 
 a{
@@ -15,7 +20,6 @@ a{
 }
 
 /* Wrapper for Parallax effect */
-
 .wrapper{
     /* border: 4px solid white; */
     position: relative;
@@ -75,16 +79,18 @@ a{
 
 .menu{
     /* border: 1px solid black; */
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
 .menu > a{
+    letter-spacing: 1px;
+    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
     margin-left: 25px;
     text-decoration: none;
-    color:white;
+    color:#D46E06;
     transition: font-size 1s ;
 }
 
@@ -105,9 +111,14 @@ a{
 }
 
 /* Hi there */
-span, .desc{
-    color: white;
+.hello > span, .desc{
+    color: #C8C7D6;
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+}
+.desc{
+    color: white;
+    font-weight: 200;
+    
 }
 
 .home > span, .desc,.navbar{
@@ -226,7 +237,7 @@ span, .desc{
 
 /* Customizing the svg, replaced fill in the html svg tag with currentcolor */
 svg{
-    color: white;
+    color: #ACA7C2;
 }
 
 svg, .resume{
@@ -249,29 +260,34 @@ svg:hover{
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    color: #1f3019 ;
-    background-color: white;
+    color: #473757 ;
+    background-color: #ACA7C2;
     transition: background-color .5s, color .5s;
 }
 
 .resume:hover{
     background-color: black;
-    color: white;
+    color: #ACA7C2;
 }
 
 
 /* Experiences Page*/
 .experience{
     /* border: 1px solid blue; */
-    background-color: #749965;
+    background-color: #8D5199;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
 }
 
 .experience > h1{
     color: white;
     padding-bottom: 1rem;
+}
+
+.info-content >p, .info-content>h3{
+    color: black;
 }
 
 .title{
@@ -313,7 +329,7 @@ svg:hover{
     /* border: 1px solid black; */
     height: 5%;
     width: 2%;
-    background-color: #4F311C;
+    background-color: white;
     border-radius: 50px;
     position: relative;
     top: 48%;
@@ -365,7 +381,7 @@ svg:hover{
 /* .lines */
 .line{
     /* border: 1px solid purple; */
-    background-color: #4F311C;
+    background-color: white;
     border-radius: 20px;
     width: 2%;
     height: 0%;
@@ -379,7 +395,6 @@ svg:hover{
     /* border: 1px solid white; */
     width: 30%;
     height: 100%;
-    color: white;
     opacity: 0;
     animation: appears 1s 3s linear forwards;
     z-index: 2;
@@ -388,7 +403,7 @@ svg:hover{
 /* Clip Path */
 .circle-clip{
     /* border: 2px solid red; */
-    background-color: #4F311C;
+    background-color: white;
     height: 100%;
     width: 100%;
     display: flex;
@@ -436,13 +451,13 @@ svg:hover{
 
 /* Company Logo */
 .company{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 10%;
     height: 16%;
     border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+    /* box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2); */
     background-position: center;
 }
 .company.walgreens{
@@ -472,13 +487,15 @@ svg:hover{
 /* Projects */
 .projects{
      /* border: 2px solid white; */
+     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+     background-color: #C8C7D6;
      display: flex;
      flex-direction: column;
      justify-content: center;
 }
 
 .slide{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 2rem;
     width: 65%;
     height: 60%;
@@ -489,25 +506,26 @@ svg:hover{
 }
 
 .img-container{
-    border: 1px solid blue;
-    border-radius: 20px;
+    /* border: 1px solid blue; */
+    border-radius: 5px;
     width: 80%;
     height: 80%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     background-size: cover;
-    background-position:center;
+    background-position:top;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
 }
 
 .img-container.one{
-   background-color: gray;
+   background-image: url(/resources/images/portfolio.png);
 
 }
 
 .img-container.two{
-    background-color: gray;
+    background-image: url(/resources/images/latte-again.png);
 }
 
 .slide{
@@ -517,18 +535,27 @@ svg:hover{
 
 .text-box{
     /* border: 1px solid white; */
-    width: 60%;
-    height: 20%;
-    border-radius: 20px;
-    margin-bottom: 3rem;
+    width: 20%;
+    height: 10%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text-box >p{
+    color: #1f3019;
 }
 
 /* Arrows */
 .arrows{
     font-size: 3rem;
     position: absolute;
-    bottom: 19%;
+    bottom: 16.5%;
 }
 
 .arrows > a{
@@ -543,8 +570,123 @@ svg:hover{
 
 /* About Page */
 .about{
-    background-color:#749965;
+    background-color:#8365A1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
 }
+
+/* Content Container */
+.container{
+    /* border: 1px solid blue; */
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    width: 90%;
+    height:80%;
+  }
+  
+  .container > *{
+    border-radius:10px;
+  }
+  
+  .bio{
+    /* border: 1px solid white; */
+    margin-right: 1rem;
+    width: 20%;
+    height: 90%;
+    overflow: hidden;
+  }
+  
+  .bio > *{
+    /* border: 1px solid green; */
+    height: 50%; 
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #5e366e;
+  }
+
+  .picture{
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    height: 15rem;
+    width: 15rem;
+    background-size: cover;
+  background-position:center;
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQEGhZW3N92fWA/profile-displayphoto-shrink_800_800/0/1572886160038?e=2147483647&v=beta&t=hKWeq0Urjn1A7Tnz44uDimXzhWl3-bEM_tfqtEsQR0o');
+  }
+  
+  .misc{
+    border: 1px solid blue;
+    width:60%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .misc > *{
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    width:100%;
+    height: 50%;
+    border-radius:10px;
+    background-color: #5e366e;
+  }
+
+.abouth1{
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+  .about-me{
+    /* border: 1px solid red; */
+    padding: 0 1rem 1rem 1rem ;
+    align-items: flex-start;
+    font-size: .9rem;
+  }
+  .about-me> *{
+    margin:.5rem;
+  }
+  
+
+  .about-me >p {
+    text-align: left;
+  }
+  
+  .about{
+    border:0px;
+  }
+
+  .skills{
+    height: 47%;
+    flex-direction: column;
+  }
+
+  .languages{
+    display: flex;
+    border: 1px solid yellow;
+    height: 75%;
+    width: 95%;
+  }
+
+ 
+
+  iframe{
+    margin-top: .4rem;
+  }
+
+
+
+
 
 /* Animations */
 @keyframes stretchUp{
