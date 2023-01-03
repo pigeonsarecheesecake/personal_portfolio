@@ -243,9 +243,9 @@ svg{
 svg, .resume{
     /* border: 1px solid black; */
     transition: color .5s;
-    border-radius:100%;
     height: 5rem;
     width: 5rem;
+    border-radius:80%;
 }
 
 svg:hover{
@@ -520,12 +520,12 @@ svg:hover{
 }
 
 .img-container.one{
-   background-image: url(/resources/images/portfolio.png);
+   background-image: url(/resources/images/projects/portfolio.png);
 
 }
 
 .img-container.two{
-    background-image: url(/resources/images/latte-again.png);
+    background-image: url(/resources/images/projects/latte-again.png);
 }
 
 .slide{
@@ -619,7 +619,7 @@ svg:hover{
   }
   
   .misc{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width:60%;
     height:90%;
     display:flex;
@@ -673,11 +673,33 @@ svg:hover{
 
   .languages{
     display: flex;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     height: 75%;
     width: 95%;
   }
 
+  .languages > svg{
+    margin: 1rem;
+    border-radius: 0;
+    /* border: 1px solid yellow; */
+    
+  }
+  .skill{
+    transition: transform 1s;
+    /* border: 1px solid black; */
+    text-align: center;
+    width: 8%;
+    height: 30%;
+    margin: 0 .5rem;
+  }
+.skill > img{
+    max-height: 100%;
+
+}
+
+.skill:hover{
+    transform: rotateY(180deg);
+  }
  
 
   iframe{
@@ -689,6 +711,8 @@ svg:hover{
 
 
 /* Animations */
+
+
 @keyframes stretchUp{
     to{
         height: 150%;
