@@ -117,8 +117,8 @@ body{
 }
 
 .hello > span, .desc,.navbar{
-  opacity: 1;
-  /* animation-name: appears; */
+  opacity: 0;
+  animation-name: appears; 
   animation-duration: 2.5s;
   animation-fill-mode:forwards;
 }
@@ -217,7 +217,7 @@ body{
     animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     width: 7rem;
     height: 7rem;
-    opacity: 1;
+    opacity: 0;
 }
 /* Expands the container */
 @keyframes wexpand{
@@ -569,12 +569,12 @@ body{
 }
 
 .img-container.one{
-   background-image: url(/resources/images/projects/latte-again.png);
-
+   background-image: url(../resources/images/projects/latte-again.png);
+   
 }
 
 .img-container.two{
-    background-image: url(/resources/images/projects/portfolio.png);
+    background-image: url(../resources/images/projects/portfolio.png);
 }
 
 
