@@ -12,7 +12,6 @@ h1{
 }
 
 a{
-    font-weight: 600;
     text-decoration: none;
 }
 
@@ -23,7 +22,7 @@ body{
 
 /* Wrapper for Parallax effect */
 .wrapper{
-    /* border: 4px solid white; */
+    border: 4px solid white;
     background: transparent;
     position: relative;
     height: 100vh;
@@ -34,13 +33,12 @@ body{
 
 /* Styling for every page */
 .page{
-    /* border: 1px solid white; */
+    border: 1px solid yellow;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform-style: preserve-3d;
-    /* z-index: -1; */
     height: 100%;
 }
 
@@ -51,7 +49,7 @@ body{
 
 /* navbar */
 .navbar{
-    /* border: 1px solid blue; */
+    border: 5px solid blue;
     display: flex;
     justify-content: space-around;
     backdrop-filter: blur(2px);
@@ -60,14 +58,11 @@ body{
     z-index: 1;
     height: 7.5rem;
     width: 100%;
-    margin: 0 auto;
-    animation: drops 4s  forwards;
 }
-
 
 /* Menu */
 .menu{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 80%;
     display: flex;
     justify-content: end;
@@ -86,10 +81,10 @@ body{
 .menu > a:hover{
     font-size: 2rem;
 }
+
 /* home page */
 
 /* Intro */
-
 .intro{
     /* border: 1px solid purple; */
     display: flex;
@@ -105,19 +100,14 @@ body{
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
 }
 
-.desc{
-    color: white;
-    font-weight: 200;
-    letter-spacing: .3rem;
-}
-
+/* Name Span */
 .desc > span{
     font-style: italic;
     color: #eb8015;
 }
 
 .hello > span, .desc,.navbar{
-  opacity: 0;
+  opacity: 1;
   animation-name: appears; 
   animation-duration: 2.5s;
   animation-fill-mode:forwards;
@@ -163,20 +153,21 @@ body{
     animation-delay: 2.2s;
 }
 
+.navbar{
+    animation-delay: 5s;
+}
+
 /* Description */
 .desc{
     /* border: 1px solid red; */
     font-size: 2rem;
     animation-delay: 3.5s;
+    color: white;
+    font-weight: 200;
+    letter-spacing: .3rem;
 }
-
-.navbar{
-    animation-delay: 5s;
-}
-
 
 /* Animation to make the social medias move to the left */
-
 .socials > a{
     display: flex;
     border-radius: 100%;
@@ -189,27 +180,15 @@ body{
 .res{
     animation: moveEnd 2.5s 4s forwards;
 }
+
 /* LinkedIn */
 .li{
     animation: moveMiddle 2.5s 4s forwards;
 }
 
-@keyframes moveMiddle{
-    100%{
-        transform: translateX(-7rem);
-    }
-}
-
-@keyframes moveEnd{
-    100%{
-        transform: translateX(-14rem);
-    }
-}
-
 /* Socials Container */
 .socials{
     /* border: 1px solid blue; */
-
     align-self: flex-end;
     border-radius: 50px;
     backdrop-filter: blur(10px);
@@ -218,12 +197,6 @@ body{
     width: 7rem;
     height: 7rem;
     opacity: 0;
-}
-/* Expands the container */
-@keyframes wexpand{
-    100%{
-        width:21rem;
-    }
 }
 
 /* Customizing the svg, replaced fill in the html svg tag with currentcolor */
@@ -243,8 +216,6 @@ body{
     color: black;
 }
 
-
-
 /* Resume */
 .resume {
     display: flex;
@@ -261,10 +232,8 @@ body{
     color: #ACA7C2;
 }
 
-
-/* Projects */
-
-.custom-shape-divider-bottom-1673203820 {
+/* Bottom Curve Divider */
+.divider-one {
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -273,46 +242,40 @@ body{
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1673203820 svg {
+.cdivider-one svg {
     position: relative;
     display: block;
     width: calc(134% + 1.3px);
     height: 121px;
 }
 
-.custom-shape-divider-bottom-1673203820 .shape-fill {
+.divider-one .shape-fill {
     fill: rgb(116, 92, 133);
 }
+
+/* Project Page*/
 /* Content */
 .projects{
      /* border: 2px solid white; */
-     /* border-radius: 30px; */
-    background-color: rgb(116, 92, 133);
+     background-color: rgb(116, 92, 133);
      text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
-     /* background: linear-gradient(white,rgb(65, 31, 87) ); */
-     /* background: white; */
      display: flex;
      flex-direction: row;
      justify-content: center;
 }
 
+/* Blob design behind slides */
 .blob{
-    
     position: absolute;
     z-index: -2;
     opacity: .2;
 }
 
-
-.wrapper > .blob{
-    right: -10rem;
-}
-
+/* Slides */
 .slide{
-    /* border: 2px solid red; */
+    border: 2px solid red;
     border-radius: 50px;
-    margin:2rem 2rem;
-
+    margin:2rem;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -322,6 +285,7 @@ body{
     animation-duration: 1.5s;
 }
 
+/* Projects heading behind slides */
 .img-container::after{
     text-align: center;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
@@ -337,6 +301,7 @@ body{
     z-index: -1;
 }
 
+/* Project image container */
 .img-container{
     position: relative;
     margin-bottom: 1rem;
@@ -360,8 +325,7 @@ body{
     background-image: url(../resources/images/projects/portfolio.png);
 }
 
-
-
+/* Project Name */
 .text-box{
     border: 3px solid #eb8015;
     width: 20%;
@@ -374,16 +338,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-.text-box >p{
     color: #1f3019;
 }
+/* Arrows to switch slides */
 .prev,.next{
     font-size: 6rem;
     cursor: pointer;
     transition: opacity .5s;
-    
 }
 
 .prev:hover,.next:hover{
@@ -393,7 +354,8 @@ body{
 
 /* About Page */
 
-.custom-shape-divider-top-1673204232 {
+/* Page divider 2 */
+.divider-two {
     position: absolute;
     z-index: -1;
     top: -1px;
@@ -404,7 +366,7 @@ body{
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1673204232 svg {
+.divider-two svg {
     position: relative;
     display: block;
     width: calc(131% + 1.3px);
@@ -412,11 +374,12 @@ body{
     transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1673204232 .shape-fill {
+.divider-two .shape-fill {
     fill: rgb(116, 92, 133);
 }
+
+/* About content */
 .about{
-  
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
@@ -433,60 +396,8 @@ body{
     height:80%;
   }
   
-  .container > *{
-    border-radius:10px;
-  }
-  
-  .bio{
-    
-    
-    border-left: 5px solid #eb8015;
-    margin-right: 1rem;
-    width: 20%;
-    height: 90%;
-    overflow: hidden;
-  }
-  
-  .bio > *{
-    /* border: 1px solid green; */
-    height: 50%; 
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    background-color: rgb(129, 118, 141);
-  }
-
-  .picture{
-    /* border: 1px solid black; */
-    border-radius: 100%;
-    height: 15rem;
-    width: 15rem;
-    background-size: cover;
-  background-position:center;
-    background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQEGhZW3N92fWA/profile-displayphoto-shrink_800_800/0/1572886160038?e=2147483647&v=beta&t=hKWeq0Urjn1A7Tnz44uDimXzhWl3-bEM_tfqtEsQR0o');
-  }
-  
-  .misc{
-    /* border: 1px solid blue; */
-    width:60%;
-    height:90%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-  .misc > *{
-    
-    border-left: 5px solid #eb8015;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;  
-    width:100%;
-    height: 50%;
-    border-radius:10px;
-    background-color: rgb(129, 118, 141);
-  }
-
-.abouth1{
+/* About h1 */
+  .abouth1{
     /* border: 1px solid black; */
     height: 100%;
     width: 20%;
@@ -494,66 +405,115 @@ body{
     justify-content: center;
     align-items: center;
 }
- 
 
-  .about-me{
+/* Bio and miscellaneous */
+.bio, .misc > *{
+    border-radius:10px;
+    height: 50%;
+    background-color: rgb(129, 118, 141);
+    border-left: 5px solid #eb8015;
+}
+  
+.bio{
+    border-radius:10px;
+    margin-right: 1rem;
+    width: 20%;
+    height: 90%;
+  }
+  
+.bio > *{
+    /* border: 1px solid green; */
+    height: 50%; 
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+/* Picture */
+.picture{
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    height: 15rem;
+    width: 15rem;
+    background-size: cover;
+    background-position:center;
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQEGhZW3N92fWA/profile-displayphoto-shrink_800_800/0/1572886160038?e=2147483647&v=beta&t=hKWeq0Urjn1A7Tnz44uDimXzhWl3-bEM_tfqtEsQR0o');
+}
+  
+/* Container for music and skills */
+.misc{
+    /* border: 1px solid blue; */
+    width:60%;
+    height:90%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+  
+.misc > *{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    width:100%;
+}
+
+/* Facts about me */
+.about-me{
     /* border: 1px solid red; */
     padding: 0 1rem 1rem 1rem ;
     align-items: flex-start;
     font-size: .9rem;
-  }
-  .about-me> *{
-    margin:.5rem;
-  }
-  
-
-  .about-me >p {
-    text-align: left;
-  }
-  
-  .about{
-    border:0px;
-  }
-
-  .skills{
-    height: 47%;
-    flex-direction: column;
-  }
-
-  .languages{
-    display: flex;
-    /* border: 1px solid yellow; */
-    height: 75%;
-    width: 95%;
-  }
-
-  .languages > svg{
-    margin: 1rem;
-    border-radius: 0;
-    /* border: 1px solid yellow; */
-    
-  }
-  .skill{
-    transition: transform 1s;
-    /* border: 1px solid black; */
-    text-align: center;
-    width: 8%;
-    height: 30%;
-    margin: 0 .5rem;
-  }
-.skill > img{
-    max-height: 100%;
-
 }
 
-.skill:hover{
-    transform: rotateY(180deg);
-  }
- 
+.about-me > *{
+    margin:.5rem;
+}
 
-  iframe{
-    margin-top: .4rem;
-  }
+/* Skills/languages */
+.skills{
+height: 47%;
+width: 100%;
+flex-direction: column;
+}
+
+.languages{
+border: 1px solid yellow;
+display: flex;
+flex-wrap: wrap;
+height: 75%;
+width: 85%;
+}
+.languages > img{
+    -webkit-transition: all .5s linear;
+    transition: all 1s  ;
+    /* border: 1px solid black; */
+    height: 30%;
+    margin: .3rem .5rem;
+}
+.img-ex{
+    border: 1px solid green;
+    width: 5rem;
+    height: 5rem;
+    background-image: url(/resources/images/skills/figma.png);
+    background-position: center;
+    background-size: cover;
+    transition: all 1s  ;
+}
+
+.img-ex:hover{
+    transform: rotateY(180deg);
+}
+
+.languages > img:hover{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+     transition: all 1s  ;
+}
+
+/* Spotify Playlist */
+iframe{
+margin-top: .4rem;
+}
 
 /* Contact Page */
 .contact{
@@ -678,6 +638,24 @@ button:active{
 }
 
 /* Animations */
+/* Expands the container */
+@keyframes wexpand{
+    100%{
+        width:21rem;
+    }
+}
+
+@keyframes moveMiddle{
+    100%{
+        transform: translateX(-7rem);
+    }
+}
+
+@keyframes moveEnd{
+    100%{
+        transform: translateX(-14rem);
+    }
+}
 
 @keyframes appears{
     100%{
