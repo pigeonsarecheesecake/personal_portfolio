@@ -4,6 +4,8 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    -webkit-appearance: none;
+    -webkit-tap-highlight: none ;
 }
 
 h1{
@@ -630,7 +632,6 @@ button:hover::before{
 }
 
 button{
-    -webkit-appearance: none;
     color: rgb(66, 21, 66);
     z-index: 0;
     position: relative;
@@ -780,9 +781,22 @@ button:active{
    }
 
    /* Turns off transition */
-   .navbar > a{
-    transition: none;
+   .navbar >a{
+    
+   }
+   .navbar > a:hover{
+    font-size: 1rem;
    }
 
+
+   .img-container{
+    height: 60%;
+   }
+
+   .prev,.next{
+    font-size: 4rem;
+   }
+
+  
    
 }
