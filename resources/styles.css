@@ -4,8 +4,8 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    -webkit-appearance: none;
-    -webkit-tap-highlight: none ;
+    /* This removes the outline on tablets or phones when tapped */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 h1{
@@ -756,7 +756,12 @@ button:active{
 }
 
 @media screen and (max-width:1180px){
+    /* Intro resized */
+    .intro{
+        width: 70%;
+    }
     /* Reducing font sizes For any screen sizes less than 1180 (eg:tablets) */
+    
    h1{
     font-size: 2.3rem;
    }
@@ -764,12 +769,17 @@ button:active{
    h3{
     font-size: .9rem;
    }
+
    .desc{
     font-size: 1.2rem;
    }
 
    .hello > span{
     font-size: 6rem;
+   }
+
+   .prev,.next{
+    font-size: 4rem;
    }
 
    .img-container::after{
@@ -780,22 +790,40 @@ button:active{
     font-size: .7rem;
    }
 
-   /* Turns off transition */
-   .navbar >a{
-    
-   }
+   /* Turns off hover effects */
+
    .navbar > a:hover{
     font-size: 1rem;
    }
 
+   .socials svg:hover,.resume:hover{
+    color: #ACA7C2;
+   }
+
+   .prev:hover,.next:hover{
+    opacity: 1;
+   }
 
    .img-container{
     height: 60%;
    }
 
-   .prev,.next{
-    font-size: 4rem;
+   .skill:hover{
+    transform: rotateY(0);
    }
+
+   /* Removes default button styles */
+   button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   }
+
+   button::before{
+    content: none;
+   }
+
+   
 
   
    
