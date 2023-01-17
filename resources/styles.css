@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 h1{
@@ -199,7 +200,7 @@ body{
 }
 
 .socials svg:hover{
-    color: black;
+    color: rgb(209, 134, 73);
 }
 
 /* Resume */
@@ -214,8 +215,8 @@ body{
 }
 
 .resume:hover{
-    background-color: black;
-    color: #ACA7C2;
+    background-color: rgb(209, 134, 73);
+    
 }
 
 /* Bottom Curve Divider */
@@ -330,6 +331,7 @@ body{
 
 /* Arrows to switch slides */
 .prev,.next{
+    padding: 1rem;
     font-size: 6rem;
     cursor: pointer;
     transition: opacity .5s;
@@ -487,35 +489,35 @@ body{
 }
 
 #css{
-    background-image: url(/resources/images/skills/css3-logo-png-transparent.png);
+    background-image: url(../resources/images/skills/css3-logo-png-transparent.png);
 }
 
 #html{
-    background-image: url(/resources/images/skills/html.png);
+    background-image: url(../resources/images/skills/html.png);
 }
 
 #js{
-    background-image: url(/resources/images/skills/javascript.png);
+    background-image: url(../resources/images/skills/javascript.png);
 }
 
 #figma{
-    background-image: url(/resources/images/skills/figma.png);
+    background-image: url(../resources/images/skills/figma.png);
 }
 
 #git{
-    background-image: url(/resources/images/skills/git.png);
+    background-image: url(../resources/images/skills/git.png);
 }
 
 #github{
-    background-image: url(/resources/images/skills/github.png);
+    background-image: url(../resources/images/skills/github.png);
 }
 
 #java{
-    background-image: url(/resources/images/skills/java.png);
+    background-image: url(../resources/images/skills/java.png);
 }
 
 #python{
-    background-image: url(/resources/images/skills/python.png);
+    background-image: url(../resources/images/skills/python.png);
 }
 
 /* Contact Page */
@@ -628,6 +630,7 @@ button:hover::before{
 }
 
 button{
+    -webkit-appearance: none;
     color: rgb(66, 21, 66);
     z-index: 0;
     position: relative;
@@ -748,5 +751,38 @@ button:active{
     font-size: .8rem;
    }
    
+   
+}
+
+@media screen and (max-width:1180px){
+    /* Reducing font sizes For any screen sizes less than 1180 (eg:tablets) */
+   h1{
+    font-size: 2.3rem;
+   }
+
+   h3{
+    font-size: .9rem;
+   }
+   .desc{
+    font-size: 1.2rem;
+   }
+
+   .hello > span{
+    font-size: 6rem;
+   }
+
+   .img-container::after{
+    font-size: 2rem;
+   }
+
+   .about-me{
+    font-size: .7rem;
+   }
+
+   /* Turns off transition */
+   .navbar > a{
+    transition: none;
+   }
+
    
 }
