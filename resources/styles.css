@@ -8,7 +8,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-h1{
+h1,h2{
     font-size: 3rem;
     font-weight: 500;
     letter-spacing: .1rem;
@@ -632,6 +632,7 @@ button:hover::before{
 }
 
 button{
+    background-color: white;
     color: rgb(66, 21, 66);
     z-index: 0;
     position: relative;
@@ -754,77 +755,100 @@ button:active{
    
    
 }
-
+/* Reducing font sizes For any screen sizes less than 1180 (eg:tablets) */
 @media screen and (max-width:1180px){
+    /* Brings intro closer to the screen */
+    .wrapper{
+        perspective: 70px;
+    }
+
     /* Intro resized */
     .intro{
         width: 70%;
     }
-    /* Reducing font sizes For any screen sizes less than 1180 (eg:tablets) */
-    
-   h1{
-    font-size: 2.3rem;
-   }
 
-   h3{
-    font-size: .9rem;
-   }
+    /* Space for navbar */
+    .navbar{
+        margin-right: 5rem;
+    }
 
-   .desc{
-    font-size: 1.2rem;
-   }
+    /* Font size adjustments */
+    h1{
+        font-size: 2.3rem;
+    }
 
-   .hello > span{
-    font-size: 6rem;
-   }
+    h3{
+        font-size: .9rem;
+    }
 
-   .prev,.next{
-    font-size: 4rem;
-   }
+    .desc{
+        font-size: 1.2rem;
+    }
 
-   .img-container::after{
-    font-size: 2rem;
-   }
+    .hello > span{
+        font-size: 6rem;
+    }
 
-   .about-me{
-    font-size: .7rem;
-   }
+    .prev,.next{
+        font-size: 4rem;
+    }
+
+    .img-container::after{
+        font-size: 2rem;
+    }
+
+    .about-me{
+        font-size: .7rem;
+    }
 
    /* Turns off hover effects */
-
    .navbar > a:hover{
-    font-size: 1rem;
+        font-size: 1rem;
    }
 
    .socials svg:hover,.resume:hover{
-    color: #ACA7C2;
+        color: #ACA7C2;
    }
 
    .prev:hover,.next:hover{
-    opacity: 1;
+        opacity: 1;
    }
 
    .img-container{
-    height: 60%;
+        height: 60%;
    }
 
    .skill:hover{
-    transform: rotateY(0);
+        transform: rotateY(0);
    }
 
    /* Removes default button styles */
+   button::before{
+        content: none;
+   }
+
    button{
+    box-shadow: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
    }
 
-   button::before{
-    content: none;
-   }
+   button:active{
+        transform: translate(0) ;
+    }
 
-   
+    button{
+        -webkit-tap-highlight-color: #3a2d44;
+        webkit-tap-hih
+    }
+}
 
-  
-   
+@media screen and (max-width:767px){
+    .navbar,.socials,.blob,.letsConnect{
+        display: none;
+    }
+    .divider-one, .divider-two,.divider-contact{
+        display: none;
+    }
 }
