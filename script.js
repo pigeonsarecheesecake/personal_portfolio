@@ -28,4 +28,9 @@ function currentSlide(){
     slides[index].style.display = 'flex';
 }
 
-currentSlide();
+// Only shows when its bigger than mobile
+if (window.innerWidth > 767){
+    currentSlide();
+}
+
+
