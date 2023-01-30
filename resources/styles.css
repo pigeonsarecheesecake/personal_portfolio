@@ -870,6 +870,7 @@ button:active{
 /* Mobile and portrait mode ipad*/
 @media screen and (max-width:896px), screen and (max-width:1180px) and (orientation:portrait) {
     /* First curve divider */
+    
     .divider-one{
         /* border: 1px solid black; */
         position: relative;
@@ -1117,6 +1118,18 @@ button:active{
 
 /* Ipad portrait mode font sizes */
 @media screen and (min-width:768px) and (max-width:1180px) and (orientation:portrait){
+    
+    .projects{
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .slide{
+        height: 40%;
+    }
+    .prev,.next{
+        display: flex;
+    }
     .navbar > a:hover{
         font-size: 2rem;
     }
@@ -1193,15 +1206,13 @@ button:active{
         height: 200vh;
     }
     .socials{
-        
         /* border: 1px solid black; */
         width: 30%;
         height: 30%;
-       bottom: 50px;
-        
+        bottom: 50px;
     }
 
     .home{
-     height: 110vh;   
+        height: 110vh;   
     }
 }

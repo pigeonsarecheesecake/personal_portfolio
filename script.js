@@ -29,8 +29,10 @@ function currentSlide(){
 }
 
 // Only shows when its bigger than mobile
-if (window.innerWidth > 1179 ){
+if(window.innerWidth > 819){
     currentSlide();
 }
+
+    
 
 
