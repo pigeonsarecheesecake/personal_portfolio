@@ -357,7 +357,7 @@ body{
 .divider-two {
     position: absolute;
     z-index: -1;
-    top: -1px;
+    top: -5px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -761,8 +761,7 @@ button:active{
    .about-me{
     font-size: .8rem;
    }
-   
-   
+
 }
 
 
@@ -869,7 +868,7 @@ button:active{
 
 
 /* Mobile and portrait mode ipad*/
-@media screen and (max-width:767px), screen and (max-width:1180px) and (orientation:portrait) {
+@media screen and (max-width:896px), screen and (max-width:1180px) and (orientation:portrait) {
     /* First curve divider */
     .divider-one{
         /* border: 1px solid black; */
@@ -1088,7 +1087,7 @@ button:active{
     .contact h2{
         font-size: 1.5rem ;
         position: absolute;
-        top: 3rem;
+        top: 9rem;
         left: 0;
         margin-left: 2rem;
     }
@@ -1166,6 +1165,43 @@ button:active{
         height: 5rem;
         font-size: 2rem;
     }
+}
 
-   
+/* Mobile Landscape */
+@media screen and (max-width:896px) and (orientation:landscape){
+    .intro > * {
+        /* border: 1px solid yellow; */
+    }
+    .intro{
+        justify-content: center;
+        
+    }
+
+    .desc-mobile{
+        width: 50%;
+    }
+    .mobile-pic-container{
+        display: none;
+    }
+    .intro{
+        /* border: 1px solid black; */
+    }
+    .navbar{
+        height: 20%;
+    }
+    .page{
+        height: 200vh;
+    }
+    .socials{
+        
+        /* border: 1px solid black; */
+        width: 30%;
+        height: 30%;
+       bottom: 50px;
+        
+    }
+
+    .home{
+     height: 110vh;   
+    }
 }
