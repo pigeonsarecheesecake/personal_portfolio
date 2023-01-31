@@ -8,7 +8,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-h1,h2{
+h1, h2{
     font-size: 3rem;
     font-weight: 500;
     letter-spacing: .1rem;
@@ -29,6 +29,7 @@ body{
     background: transparent;
     position: relative;
     height: 100vh;
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 50px;
@@ -55,6 +56,7 @@ body{
 .desc-mobile, .mobile-pic-container{
     display: none;
 }
+
 /* navbar */
 .navbar{
     /* border: 5px solid blue; */
@@ -85,7 +87,6 @@ body{
 }
 
 /* home page */
-
 /* Intro */
 .intro{
     /* border: 1px solid purple; */
@@ -109,6 +110,7 @@ body{
     color: #eb8015;
 }
 
+/* Animation for 'Hello!', description and navigation bar */
 .hello > span, .desc,.navbar{
   opacity: 0;
   animation-name: appears; 
@@ -144,7 +146,6 @@ body{
     animation-delay: 1.7s;
 }
 
-
 .navbar{
     animation-delay: 3s;
 }
@@ -158,15 +159,13 @@ body{
     font-weight: 200;
     letter-spacing: .3rem;
 }
-/* Description for mobile */
 
 /* Socials Container */
 .socials{
-    position: relative;
     /* border: 1px solid blue; */
+    position: relative;
     align-self: flex-end;
     border-radius: 50px;
-    /* backdrop-filter: blur(10px); */
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
     animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     width: 5.8vw;
@@ -248,12 +247,12 @@ body{
     fill: rgb(116, 92, 133);
 }
 
-/* Project Page* /
-
-/* Content */
- .projects > h1{
-        display: none;
-    }
+/* Projects Page* /
+/* H1 for mobile */
+.projects > h1{
+    display: none;
+}
+    
 .projects{
      /* border: 2px solid white; */
      background-color: rgb(116, 92, 133);
@@ -296,7 +295,7 @@ body{
     content: 'Projects';
     position: absolute;
     right: -15vw;
-    top: 3rem;
+    top: 10%;
     z-index: -1;
 }
 
@@ -352,7 +351,6 @@ body{
 }
 
 /* About Page */
-
 /* Page divider 2 */
 .divider-two {
     position: absolute;
@@ -396,7 +394,7 @@ body{
   }
   
 /* About h1 */
-  .abouth1{
+.abouth1{
     /* border: 1px solid black; */
     height: 100%;
     width: 20%;
@@ -414,11 +412,12 @@ body{
 }
   
 .bio{
+    /* border: 1px solid black; */
     border-radius:10px;
     margin-right: 1rem;
     width: 20%;
     height: 90%;
-  }
+}
   
 .bio > *{
     /* border: 1px solid green; */
@@ -426,7 +425,7 @@ body{
     display: flex;
     justify-content:center;
     align-items:center;
-  }
+}
   
 /* Picture */
 .picture{
@@ -635,6 +634,7 @@ button::before{
     transition: width 1s;
 }
 
+/* A trick to give the button the animation by using combining pseudo class and pseudo element*/
 button:hover::before{
     width: 105%;
 }
@@ -696,7 +696,6 @@ button:active{
 }
 
 /* Animations */
-
 @keyframes wexpand{
     100%{
         width:17.5vw;
@@ -742,35 +741,35 @@ button:active{
 /* Laptop */
 @media screen and (max-width:1470px){
     /* Reducing font sizes For any screen sizes less than 1470 */
-   h1{
-    font-size: 2.5rem;
-   }
+    h1{
+        font-size: 2.5rem;
+    }
 
-   .desc{
-    font-size: 1.5rem;
-   }
+    .desc{
+        font-size: 1.5rem;
+    }
 
-   .hello > span{
-    font-size: 7rem;
-   }
+    .hello > span{
+        font-size: 7rem;
+    }
 
-   .img-container::after{
-    font-size: 2rem;
-   }
+    .img-container::after{
+        font-size: 2rem;
+    }
 
-   .about-me{
-    font-size: .8rem;
-   }
-
+    .about-me{
+        font-size: .8rem;
+    }
 }
 
 
-/* Reducing font sizes For any screen sizes less than 1180 (eg:tablets) */
+/* Reducing font sizes For any screen sizes less than 1180px (eg:tablets) landscape  */
 @media screen and (max-width:1180px){
     /* Divider 2 */
     .divider-two{
         top:-10px;
     }
+
     /* Brings intro closer to the screen */
     .wrapper{
         perspective: 70px;
@@ -818,41 +817,41 @@ button:active{
    /* Turns off hover effects */
    .navbar > a:hover{
         font-size: 1rem;
-   }
+    }
 
    .socials svg:hover{
         color: #ACA7C2;
-   }
+    }
 
    .resume:hover{
     background-color: #ACA7C2;;
-   }
+    }
 
    .prev:hover,.next:hover{
         opacity: 1;
-   }
+    }
 
    .img-container{
         height: 60%;
-   }
+    }
 
    .skill:hover{
         transform: rotateY(0);
-   }
+    }
 
-   /* Removes default button styles */
-   button::before{
-        content: none;
-   }
+   /* Removes button styles */
+    button::before{
+            content: none;
+        }
 
-   button{
+    button{
         box-shadow: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-   }
+    }
 
-   button:active{
+    button:active{
         transform: translate(0) ;
     }
 
@@ -862,15 +861,9 @@ button:active{
     }
 }
 
-
-
-
-
-
-/* Mobile and portrait mode ipad*/
-@media screen and (max-width:896px), screen and (max-width:1180px) and (orientation:portrait) {
+/* Mobile and portrait mode tablet*/
+@media screen and (max-width:1150px) {
     /* First curve divider */
-    
     .divider-one{
         /* border: 1px solid black; */
         position: relative;
@@ -887,9 +880,9 @@ button:active{
         width: 90%;
         height: 8%;
         margin-right: 0;
-        
     }
 
+    /* Disables hover */
     .navbar > a:hover{
         font-size: 1rem;
     }
@@ -955,7 +948,7 @@ button:active{
         margin-bottom: .5rem;
     }
 
-    /* Front-end developer and Ui/ux designer */
+    /* "Front-end developer and ui/ux designer" */
     .desc-mobile :nth-child(3){
         font-size: .7rem;
         font-weight: 200;
@@ -989,7 +982,8 @@ button:active{
         border: 20px;
         background-color: #e6b17c;
     }
-   
+    
+    /* Restructures slides */
     .slide{
         /* border: 1px solid red; */
         width: 80%;
@@ -1086,9 +1080,9 @@ button:active{
     }
     
     .contact h2{
-        font-size: 1.5rem ;
+        font-size: 2rem ;
         position: absolute;
-        top: 9rem;
+        top: 15%;
         left: 0;
         margin-left: 2rem;
     }
@@ -1111,14 +1105,10 @@ button:active{
         height: 80%;
     }
     
-  
-
-    
 }
 
-/* Ipad portrait mode font sizes */
-@media screen and (min-width:768px) and (max-width:1180px) and (orientation:portrait){
-    
+/* Tablet portrait mode font sizes */
+@media screen and (min-width:750px) and (max-width:1150px) and (orientation:portrait){
     .projects{
         height: 80vh;
         flex-direction: row;
@@ -1136,7 +1126,6 @@ button:active{
     .navbar{
         font-size: 2rem;
     }
-
     .navbar > a{
         margin: 0 2rem;
     }
@@ -1181,24 +1170,18 @@ button:active{
 }
 
 /* Mobile Landscape */
-@media screen and (max-width:896px) and (orientation:landscape){
-    .intro > * {
-        /* border: 1px solid yellow; */
-    }
+@media screen and (max-width:900px) and (orientation:landscape) {
     .intro{
         justify-content: center;
-        
     }
-
+    
     .desc-mobile{
         width: 50%;
     }
     .mobile-pic-container{
         display: none;
     }
-    .intro{
-        /* border: 1px solid black; */
-    }
+  
     .navbar{
         height: 20%;
     }
