@@ -42,6 +42,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
     height: 100%;
 }
@@ -51,8 +54,8 @@ body{
     /* border: 1px solid black; */
     width: 80vw;
 }
-/* Hidden mobile picture and description */
 
+/* Hidden mobile picture and description */
 .desc-mobile, .mobile-pic-container{
     display: none;
 }
@@ -79,6 +82,9 @@ body{
     margin-left: 25px;
     text-decoration: none;
     color:white;
+    -webkit-transition: font-size 1s ;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
     transition: font-size 1s ;
 }
 
@@ -86,7 +92,7 @@ body{
     font-size: 2rem;
 }
 
-/* home page */
+/* Home page */
 /* Intro */
 .intro{
     /* border: 1px solid purple; */
@@ -94,6 +100,9 @@ body{
     justify-content: center;
     flex-direction: column;
     height:80%;
+    -webkit-transform: translatez(-50px) scale(2) ;
+    -moz-transform: translatez(-50px) scale(2);
+    -o-transform: translatez(-50px) scale(2);
     transform: translatez(-50px) scale(2);
 }
 
@@ -113,9 +122,21 @@ body{
 /* Animation for 'Hello!', description and navigation bar */
 .hello > span, .desc,.navbar{
   opacity: 0;
-  animation-name: appears; 
+  -webkit-animation-name:appears ;
+  -moz-animation-name: appears;
+  -o-animation-name: appears;
+  animation-name: appears;
+
+  -webkit-animation-duration: 2.5;
+  -moz-animation-duration: 2.5s;
+  -o-animation-duration: 2.5s;
   animation-duration: 2.5s;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
   animation-fill-mode:forwards;
+
 }
 
 .hello > span{
@@ -123,30 +144,50 @@ body{
 }
 
 #h{
+    -webkit-animation-delay:1s ;
+    -moz-animation-delay:1s ;
+    -o-animation-delay:1s ;
     animation-delay: 1s;
 }
 
 #i{
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -o-animation-delay:1.2s ;
     animation-delay: 1.2s;
 }
 
 #comma{
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
     animation-delay: 1.3s;
 }
 
-#t{
+#t{-webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
     animation-delay: 1.5s;
 }
 
 #h2{
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
     animation-delay: 1.6s;
 }
 
 #e{
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+    -o-animation-delay: 1.7s;
     animation-delay: 1.7s;
 }
 
 .navbar{
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
     animation-delay: 3s;
 }
 
@@ -154,6 +195,9 @@ body{
 .desc{
     /* border: 1px solid red; */
     font-size: 2rem;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
     animation-delay: 3s;
     color: white;
     font-weight: 200;
@@ -167,6 +211,9 @@ body{
     align-self: flex-end;
     border-radius: 50px;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+    -webkit-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    -moz-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
+    -o-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     width: 5.8vw;
     height: 5.8vw;
@@ -185,11 +232,17 @@ body{
 
 /* Resume */
 .res{
+    -webkit-animation: moveEnd 2.5s 4s forwards ;
+    -moz-animation: moveEnd 2.5s 4s forwards;
+    -o-animation: moveEnd 2.5s 4s forwards;
     animation: moveEnd 2.5s 4s forwards;
 }
 
 /* LinkedIn */
 .li{
+    -webkit-animation: moveMiddle 2.5s 4s forwards;
+    -moz-animation: moveMiddle 2.5s 4s forwards;
+    -o-animation: moveMiddle 2.5s 4s forwards;
     animation: moveMiddle 2.5s 4s forwards;
 }
 
@@ -200,6 +253,9 @@ body{
 
 .socials svg, .resume{
     /* border: 1px solid black; */
+    -webkit-transition:color .5s ;
+    -moz-transition: color .5s;
+    -o-transition: color .5s;
     transition: color .5s;
     height: 4.2vw;
     width: 4.2vw;
@@ -218,6 +274,9 @@ body{
     justify-content: center;
     color: #473757 ;
     background-color: #ACA7C2;
+    -webkit-transition:background-color .5s, color .5s ;
+    -moz-transition: background-color .5s, color .5s;
+    -o-transition: background-color .5s, color .5s;
     transition: background-color .5s, color .5s;
 }
 
@@ -279,7 +338,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    -webkit-animation-name: fade ;
+    -moz-animation-name: fade;
+    -o-animation-name: fade;
     animation-name: fade;
+    -webkit-animation-duration:1.5s ;
+    -moz-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
     animation-duration: 1.5s;
 }
 
@@ -343,6 +408,9 @@ body{
     padding: 1rem;
     font-size: 6rem;
     cursor: pointer;
+    -webkit-transition:opacity .5s ;
+    -moz-transition:opacity .5s ;
+    -o-transition:opacity .5s ;
     transition: opacity .5s;
 }
 
@@ -360,6 +428,9 @@ body{
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
@@ -368,6 +439,9 @@ body{
     display: block;
     width: calc(131% + 1.3px);
     height: 26vw;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     transform: rotateY(180deg);
 }
 
@@ -427,7 +501,7 @@ body{
     align-items:center;
 }
   
-/* Picture */
+/* Picture of me*/
 .picture{
     /* border: 1px solid black; */
     border-radius: 100%;
@@ -490,10 +564,16 @@ body{
     height: 4vw;
     background-position: center;
     background-size: cover;
+    -webkit-transition:all 1s ;
+    -moz-transition:all 1s ;
+    -o-transition:all 1s ;
     transition: all 1s;
 }
 
 .skill:hover{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -631,6 +711,9 @@ button::before{
     background:#eb8015;
     opacity: .2;
     z-index: -1;
+    -webkit-transition:width 1s ;
+    -moz-transition:width 1s ;
+    -o-transition:width 1s ;
     transition: width 1s;
 }
 
@@ -659,6 +742,9 @@ button > p {
 }
 
 button:active{
+    -webkit-transform: translate(6px, 6px);
+    -moz-transform: translate(6px, 6px);
+    -o-transform: translate(6px, 6px);
     transform: translate(6px, 6px);
     box-shadow: none;
 }
@@ -671,6 +757,9 @@ button:active{
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
@@ -704,12 +793,18 @@ button:active{
 
 @keyframes moveMiddle{
     100%{
+        -webkit-transform:translateX(-5.8vw) ;
+        -moz-transform: translateX(-5.8vw);
+        -o-transform: translateX(-5.8vw);
         transform: translateX(-5.8vw);
     }
 }
 
 @keyframes moveEnd{
     100%{
+        -webkit-transform:translateX(-11.7vw) ;
+        -moz-transform: translateX(-11.7vw);
+        -o-transform: translateX(-11.7vw);
         transform: translateX(-11.7vw);
     }
 }
@@ -719,6 +814,7 @@ button:active{
       opacity:1;
     }
 }
+
 
 @keyframes stretchUp{
     to{
@@ -763,7 +859,7 @@ button:active{
 }
 
 
-/* Reducing font sizes For any screen sizes less than 1180px (eg:tablets) landscape  */
+/* Tablet*/
 @media screen and (max-width:1180px){
     /* Divider 2 */
     .divider-two{
@@ -836,6 +932,9 @@ button:active{
     }
 
    .skill:hover{
+        -webkit-transform:rotateY(0) ;
+        -moz-transform:rotateY(0) ;
+        -o-transform:rotateY(0) ;
         transform: rotateY(0);
     }
 
@@ -846,12 +945,13 @@ button:active{
 
     button{
         box-shadow: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
         appearance: none;
     }
 
     button:active{
+        -webkit-transform:translate(0) ;
+        -webkit-transform:translate(0) ;
+        -webkit-transform:translate(0) ;
         transform: translate(0) ;
     }
 
@@ -861,8 +961,9 @@ button:active{
     }
 }
 
-/* Mobile and portrait mode tablet*/
-@media screen and (max-width:1150px) {
+
+/* Tablet portrait mode*/
+@media screen and (max-width:900px) {
     /* First curve divider */
     .divider-one{
         /* border: 1px solid black; */
@@ -870,23 +971,30 @@ button:active{
         top: 3px;
     }
 
-    /* Navbar */
+    /* Navigation bar */
     .navbar{
         /* border: 1px solid black; */
+        padding: 1rem;
+        position: sticky;
+        background-color: #3a2d44;
         opacity: 1;
-        font-size: 1rem;
-        /* right: 1.1rem; */
+        font-size: 2rem;
         border-radius: 0;
-        width: 90%;
+        width: 100%;
         height: 8%;
         margin-right: 0;
+    }
+    
+    .navbar > a{
+        /* border: 1px solid black; */
+        margin: 0 5% ;
     }
 
     /* Disables hover */
     .navbar > a:hover{
-        font-size: 1rem;
+        font-size: 2rem;
     }
-    
+
     /* Home Page */
     .home{
         /* border: 5px solid black; */
@@ -901,7 +1009,8 @@ button:active{
     .desc,.hello, .home > span, .blob, .divider-two,.divider-contact{
         display: none;
     }
-   
+
+    /* Social media and resume */
     .socials{
         /* border: 1px solid black; */
         animation: none;
@@ -917,9 +1026,9 @@ button:active{
     .socials > a{
         /* border: 1px solid black; */
         animation: none;
-        width: 2.5rem;
-        height: 2.5rem;
         position: relative;
+        width: 6rem;
+        height: 6rem;
     }
 
     .socials svg, .resume{
@@ -928,18 +1037,18 @@ button:active{
     }
 
     .resume{
-        font-size: .5rem;
+        font-size: 1rem;
     }
-    
-    /* Description mobile only */
+
+    /* Description mobile and tablet portrait only */
     .desc-mobile{
         /* border: 1px solid black; */
         display: flex;
         flex-direction:column ;
         margin-bottom: .5rem;
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
-  
+
     .desc-mobile > p > span{
         color: #eb8015;
     }
@@ -948,9 +1057,8 @@ button:active{
         margin-bottom: .5rem;
     }
 
-    /* "Front-end developer and ui/ux designer" */
     .desc-mobile :nth-child(3){
-        font-size: .7rem;
+        font-size: 1.5rem;
         font-weight: 200;
     }
 
@@ -970,8 +1078,38 @@ button:active{
     }
 
     /* Projects */
-    .img-container::after,.prev,.next{
+    .projects > h1{
+        display: block;
+        position: absolute;
+        top: 3rem;
+    }
+
+    .projects{
+        height: 80vh;
+        flex-direction: row;
+    }
+
+    .img-container::after{
         display: none;
+    }
+
+    .slide{
+        width: 80%;
+        height: 40%;
+        margin: 0 .5rem;
+    }
+
+    .img-container{
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .prev,.next{
+        display: flex;
     }
 
     .text-box{
@@ -982,40 +1120,18 @@ button:active{
         border: 20px;
         background-color: #e6b17c;
     }
-    
-    /* Restructures slides */
-    .slide{
-        /* border: 1px solid red; */
-        width: 80%;
-        height: 30%;
-        margin: 0 .5rem;
-    }
 
-    .img-container{
-        border-radius: 0;
-        box-shadow: none;
-        border: 1px solid black;
-        width: 100%;
-        height: 100%;
-        border: 3px;
-        margin-bottom: 0;
-    }
-
-    .projects{
-        /* border: 1px solid yellow; */
-        display: flex;
-        flex-direction: column;
-    }
-
-    .projects > h1{
-        display: block;
-        position: absolute;
-        top: 3rem;
-    }
-
-    /* About Page */
+    /* About */
     .abouth1{
         height: 20%;
+    }
+
+    .container{
+        /* border: 1px solid black; */
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .music,.picture-container{
@@ -1034,15 +1150,6 @@ button:active{
         height: 25%;
     }
 
-    .container{
-        /* border: 1px solid black; */
-        flex-direction: column;
-        height: 100%;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
-    /* Bio */
     .bio{
         width: 100%;
         height: 40%;
@@ -1051,7 +1158,7 @@ button:active{
     }
 
     .about-me{
-        font-size: .8rem;
+        font-size: 1.5rem;
         width: 100%;
     }
 
@@ -1066,28 +1173,24 @@ button:active{
         height: 100%;
     }
 
-    .skill {
+    .skill{
         /* border: 1px solid black; */
-        margin: 0 .5rem;
-        height: 2.5rem;
-        width: 2.5rem;
+        width: 5rem;
+        height: 5rem;
     }
-
-    /* Contact Page */
-    /* H2 Contact */
+    
     .letsConnect{
         display: none;
     }
-    
+
     .contact h2{
-        font-size: 2rem ;
+        font-size: 4rem ;
         position: absolute;
         top: 15%;
         left: 0;
         margin-left: 2rem;
     }
-
-    /* Contact fields */
+    
     .contactFields{
         /* border: 1px solid green; */
         width: 100%;
@@ -1101,101 +1204,158 @@ button:active{
         width: 80%;
     }
 
-    textarea{
-        height: 80%;
+    button{
+        height: 10%;
+        font-size: 80%;
     }
-    
 }
 
-/* Tablet portrait mode font sizes */
-@media screen and (min-width:750px) and (max-width:1150px) and (orientation:portrait){
-    .projects{
-        height: 80vh;
-        flex-direction: row;
-    }
-
-    .slide{
-        height: 40%;
-    }
-    .prev,.next{
-        display: flex;
-    }
-    .navbar > a:hover{
-        font-size: 2rem;
-    }
+/* Mobile */
+@media screen and (max-width:720px){
+    /* Navigation bar */
     .navbar{
-        font-size: 2rem;
-    }
-    .navbar > a{
-        margin: 0 2rem;
-    }
-
-    .desc-mobile{
-        font-size: 3rem;
-    }
-
-    .desc-mobile :nth-child(3){
-        font-size: 1.5rem;
-        font-weight: 200;
-    }
-    
-    .socials > a{
-        /* border: 1px solid black; */
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .socials .resume{
         font-size: 1rem;
     }
 
-    .about-me{
+    .navbar > a{
+        margin: 0 1rem;
+    }
+
+    /* Disables hover */
+    .navbar > a:hover{
+        font-size: 1rem;
+    }
+
+    /* Social media and resume */
+    .socials > a{
+        /* border: 1px solid black; */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .resume{
+        font-size: .5rem;
+    }
+    
+    .desc-mobile{
+        /* border: 1px solid black; */
         font-size: 1.5rem;
     }
 
-    .skill{
-        /* border: 1px solid black; */
-        width: 5rem;
-        height: 5rem;
+    /* "Front-end developer and ui/ux designer" */
+    .desc-mobile :nth-child(3){
+        font-size: .7rem;
     }
 
+    /* Projects page*/
+    .prev,.next{
+        display: none;
+    }
+
+    .projects{
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide{
+        height: 30%;
+    }
+
+    /* About Page */
+    .about-me{
+        font-size: .8rem;
+    }
+
+    .skill {
+        /* border: 1px solid black; */
+        margin: 0 .5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    /* Contact Page */
+    /* H2 Contact */
     .contact h2{
-        font-size: 4rem;
+        font-size: 2rem;
+    }
+
+    textarea{
+        height: 80%;
     }
 
     button{
-        height: 5rem;
-        font-size: 2rem;
+        height: 40%;
+        font-size: 1rem;
     }
 }
 
 /* Mobile Landscape */
-@media screen and (max-width:900px) and (orientation:landscape) {
-    .intro{
-        justify-content: center;
-    }
-    
-    .desc-mobile{
-        width: 50%;
-    }
-    .mobile-pic-container{
+@media screen and (max-width:900px)  and (orientation:landscape){
+    .prev, .next{
         display: none;
     }
-  
+    .projects{
+        flex-direction: column;
+    }
+    .slide{
+        height: 30%;
+        width: 60%;
+    }
     .navbar{
-        height: 20%;
+        font-size: 1rem;
     }
     .page{
         height: 200vh;
     }
-    .socials{
-        /* border: 1px solid black; */
-        width: 30%;
-        height: 30%;
-        bottom: 50px;
+
+    .navbar{
+        height: 20%;
     }
 
     .home{
         height: 110vh;   
+    }
+    
+    .intro{
+        justify-content: center;
+    }
+
+   .resume{
+        font-size: .5rem;
+    }
+   
+   .socials > a {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .desc-mobile{
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .desc-mobile :nth-child(3){
+        font-size: 1rem;
+    }
+
+    .mobile-pic-container{
+        display: none;
+    }
+
+    .socials{
+        /* border: 1px solid black; */
+        width: 50%;
+        height: 30%;
+        bottom: 50px;
+    }    
+
+    .about-me{
+        font-size: 1rem;
+    }
+
+    .skill{
+        width: 4rem;
+        height: 4rem;
     }
 }
