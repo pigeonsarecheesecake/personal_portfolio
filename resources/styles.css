@@ -21,7 +21,16 @@ a{
 body{
     background: #3a2d44;
     color: white;
+    transition: all .2s linear;
 }
+/* Bright mode */
+.white-background{
+    background: white;
+    transition: all .2s linear;
+}
+
+
+
 
 /* Wrapper for Parallax effect */
 .wrapper{
@@ -59,6 +68,39 @@ body{
 .desc-mobile, .mobile-pic-container{
     display: none;
 }
+
+/* Light dark mode switch */
+.toggle,#circle{
+    border-radius: 50px;
+}
+.toggle{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: px solid black;
+    width: 7%;
+    height: 5vh;
+    background-color:#e79849;
+    transition: all .1s linear;
+}
+.mode{
+    /* border: 1px solid black; */
+    height: 50%;
+}
+
+#circle{
+    /* border:1px solid yellow; */
+    background-color:#e79849;
+    position:absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    transition: all .1s linear;
+}
+
+
 
 /* navbar */
 .navbar{
@@ -330,7 +372,7 @@ body{
 
 /* Slides */
 .slide{
-    /* border: 2px solid red; */
+    border: 2px solid red;
     border-radius: 50px;
     margin:2rem;
     height: 60%;
@@ -1357,4 +1399,41 @@ button:active{
         width: 4rem;
         height: 4rem;
     }
+}
+
+/* New classes for later use */
+span.name-color-change{
+    color:#403f41;
+    font-weight: 600
+}
+.toggle-color-change{
+    background-color: #403f41;
+}
+#circle.toggle-right{
+    transform: translateX(100%);
+    background-color: black;
+    transition: all .1s linear;
+}
+.colorchange, span.colorchange,svg.colorchange,.navbar > .colorchange{
+    color:black;
+    
+}
+
+.resume-color-change{
+    background-color: black;
+    color: white;
+}
+
+/* Project light mode */
+#projects.project-background-change{
+    background-color: black;
+    
+}
+
+.divider-one .divider-one-black .shape-fill, .divider-two .divider-two-black .shape-fill{
+    fill:black;
+}
+
+.border-white{
+    border-color: white;
 }
