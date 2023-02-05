@@ -23,14 +23,6 @@ body{
     color: white;
     transition: all .2s linear;
 }
-/* Bright mode */
-.white-background{
-    background: white;
-    transition: all .2s linear;
-}
-
-
-
 
 /* Wrapper for Parallax effect */
 .wrapper{
@@ -79,7 +71,7 @@ body{
     justify-content: space-around;
     align-items: center;
     border: px solid black;
-    width: 7%;
+    width: 5vw;
     height: 5vh;
     background-color:#e79849;
     transition: all .1s linear;
@@ -105,23 +97,22 @@ body{
 /* navbar */
 .navbar{
     /* border: 5px solid blue; */
-    position: fixed;
+    position: sticky;
     top: 0;
-    right: 1.5rem;
-    border-radius: 50px;
-    height: 7.5rem;
-    width: 30%;
+    background-color: #3a2d44;
+    height: 7%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
     z-index: 1;
     letter-spacing: 2px;
 }
 
 .navbar > a{
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
-    margin-left: 25px;
+    margin-left: 5%;
     text-decoration: none;
     color:white;
     -webkit-transition: font-size 1s ;
@@ -163,7 +154,7 @@ body{
 
 /* Animation for 'Hello!', description and navigation bar */
 .hello > span, .desc,.navbar{
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name:appears ;
   -moz-animation-name: appears;
   -o-animation-name: appears;
@@ -348,11 +339,22 @@ body{
     fill: rgb(116, 92, 133);
 }
 
-/* Projects Page* /
-/* H1 for mobile */
+/* Projects Page*/
 .projects > h1{
-    display: none;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 20%;
+    height: 10%;
+    border-radius: 20px;
+    position: absolute;
+    top: 8%;
+    z-index: 0;
 }
+
     
 .projects{
      /* border: 2px solid white; */
@@ -372,7 +374,7 @@ body{
 
 /* Slides */
 .slide{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     border-radius: 50px;
     margin:2rem;
     height: 60%;
@@ -391,20 +393,6 @@ body{
 }
 
 /* Projects heading behind slides */
-.img-container::after{
-    text-align: center;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
-    background-color: rgb(129, 118, 141);
-    font-size: 3rem;
-    width: 30%;
-    border: 5px solid #eb8015;
-    border-radius: 20px;
-    content: 'Projects';
-    position: absolute;
-    right: -15vw;
-    top: 10%;
-    z-index: -1;
-}
 
 /* Project image container */
 .img-container{
@@ -693,14 +681,14 @@ h2{
     align-self: center;
 }
 
-.line-deco-one, .line-deco-two{
+.line-deco{
     /* border: 1px solid red; */
     background-color: #eb8015;
     width: 30%;
     height: 3%;
 }
 
-.line-deco-two{
+.line-deco.two{
     align-self: flex-end;
 }
 
@@ -750,7 +738,7 @@ button::before{
     content: '';
     height:101%;
     width: 0%;
-    background:#eb8015;
+    background:#403f41;
     opacity: .2;
     z-index: -1;
     -webkit-transition:width 1s ;
@@ -890,9 +878,7 @@ button:active{
         font-size: 7rem;
     }
 
-    .img-container::after{
-        font-size: 2rem;
-    }
+   
 
     .about-me{
         font-size: .8rem;
@@ -943,9 +929,7 @@ button:active{
         font-size: 4rem;
     }
 
-    .img-container::after{
-        font-size: 2rem;
-    }
+   
 
     .about-me{
         font-size: .6rem;
@@ -1017,7 +1001,6 @@ button:active{
         /* border: 1px solid black; */
         padding: 1rem;
         position: sticky;
-        background-color: #3a2d44;
         opacity: 1;
         font-size: 2rem;
         border-radius: 0;
@@ -1120,9 +1103,7 @@ button:active{
 
     /* Projects */
     .projects > h1{
-        display: block;
-        position: absolute;
-        top: 3rem;
+        font-size: 2.3rem;
     }
 
     .projects{
@@ -1346,6 +1327,9 @@ button:active{
     .navbar{
         font-size: 1rem;
     }
+    .navbar>a:hover{
+        font-size: 1rem;
+    }
     .page{
         height: 200vh;
     }
@@ -1402,10 +1386,21 @@ button:active{
 }
 
 /* New classes for later use */
-span.name-color-change{
-    color:#403f41;
-    font-weight: 600
+/* Bright mode */
+.white-background{
+    background: white;
+    transition: all .2s linear;
 }
+
+.navigation-bar-light{
+    background-color: white;
+}
+
+span.name-color-change, .desc-mobile .name-color-change{
+    color:#403f41;
+    font-weight: 600;
+}
+
 .toggle-color-change{
     background-color: #403f41;
 }
@@ -1416,7 +1411,6 @@ span.name-color-change{
 }
 .colorchange, span.colorchange,svg.colorchange,.navbar > .colorchange{
     color:black;
-    
 }
 
 .resume-color-change{
@@ -1425,15 +1419,50 @@ span.name-color-change{
 }
 
 /* Project light mode */
-#projects.project-background-change{
+#projects.project-background-change, .about-black{
     background-color: black;
-    
 }
 
-.divider-one .divider-one-black .shape-fill, .divider-two .divider-two-black .shape-fill{
+.divider-one-black .shape-fill, .divider-two-black .shape-fill{
     fill:black;
 }
 
 .border-white{
     border-color: white;
+}
+
+/* About light mode */
+.about-gray{
+    background-color: #403f41;
+    border-color: #403f41;
+}
+
+.divider-contact-white .shape-fill{
+    fill:white;
+}
+
+.input-light{
+    border-color: white;
+    background-color: #403f41;
+}
+
+.button-light{
+    box-shadow: 6px 6px 0px 1px #403f41;
+    color: black;
+}
+
+/* Footer */
+.footer-light{
+    background-color: white;
+    color: black;
+    
+}
+
+/* Mobile light */
+.intro-black{
+    color: black;
+}
+
+.mobile-img-container-light{
+    box-shadow: 12px -10px 0px 0px black;
 }
