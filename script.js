@@ -28,7 +28,7 @@ function currentSlide(){
     slides[index].style.display = 'flex';
 }
 
-// Only calls function when its bigger than mobile
+// This function displays interactive slides, only for ipad portrait mode and desktop screens
     if(window.innerWidth > 850  || (window.innerWidth > 800 && window.innerHeight > window.innerWidth)){
         currentSlide();
     }
@@ -45,6 +45,7 @@ let description = document.getElementsByClassName("desc");
 let resume = document.getElementsByClassName("resume");
 let navigation = document.querySelectorAll(".navbar > a");
 let navigationBar = document.querySelector(".navbar");
+
 // Project
 let projectPage = document.getElementById("projects");
 let firstDivider = document.querySelector(".divider-one svg");
@@ -73,52 +74,51 @@ let introText = document.querySelectorAll(".desc-mobile > p");
 let nameSpan = document.querySelector(".desc-mobile span");
 let portraitShadow = document.querySelector(".mobile-pic-container");
 let textBoxes = document.querySelectorAll(".text-box");
+
+// Using classlist to toggle between classes
 ball.addEventListener("click", function(){
     // Moving ball to the right and changes color between modes
     ball.classList.toggle("toggle-right");
-    newToggle[0].classList.toggle("toggle-color-change");
+    newToggle[0].classList.toggle("toggle-light");
 
     // Home page
     background.classList.toggle("white-background");
-    description[0].classList.toggle("colorchange");
-    resume[0].classList.toggle("resume-color-change");
-    fullName.classList.toggle("name-color-change");
+    description[0].classList.toggle("font-light");
+    resume[0].classList.toggle("resume-light");
+    fullName.classList.toggle("name-light");
     navigationBar.classList.toggle("navigation-bar-light");
-   
+    // Changing "hello" spans color
     for(let i = 0; i<letter.length ; i++){
-        letter[i].classList.toggle("colorchange");
-        // console.log(letter[i]);
+        letter[i].classList.toggle("font-light");
     }
-
+    // Changing socials' svgs color
     for(let i = 0; i<social.length ; i++){
-        social[i].classList.toggle("colorchange");
-        // console.log(social[i]);
+        social[i].classList.toggle("font-light");
     }
-
+    // Changing navigation bar's color
     for(let i = 0; i<navigation.length ; i++){
-        navigation[i].classList.toggle("colorchange");
-        // console.log(social[i]);
+        navigation[i].classList.toggle("font-light");
     }
 
     // Projects page
-    projectPage.classList.toggle("project-background-change");
-    firstDivider.classList.toggle("divider-one-black");
-    secondDivider.classList.toggle("divider-two-black");
+    projectPage.classList.toggle("projects-light");
+    firstDivider.classList.toggle("divider-one-light");
+    secondDivider.classList.toggle("divider-two-light");
     for(i = 0 ; i<slide.length;i++){
         slide[i].classList.toggle("border-white");
         textBox[i].classList.toggle("border-white");
     }
 
     // About
-    bio.classList.toggle("about-gray");
-    about.classList.toggle("colorchange");
+    bio.classList.toggle("about-light");
+    about.classList.toggle("font-light");
     dividerThree.classList.toggle("divider-contact-white");
     for(i = 0 ; i<misc.length;i++){
-        misc[i].classList.toggle("about-gray");
+        misc[i].classList.toggle("about-light");
     }
 
     // Contact
-    contact.classList.toggle("about-black");
+    contact.classList.toggle("contact-light");
     textArea[0].classList.toggle("input-light");
     button[0].classList.toggle("button-light");
     for(i = 0 ; i<lineDeco.length;i++){
@@ -132,16 +132,14 @@ ball.addEventListener("click", function(){
     footer.classList.toggle("footer-light");
 
     // Mobile
-    nameSpan.classList.toggle("name-color-change");
+    nameSpan.classList.toggle("name-light");
     portraitShadow.classList.toggle("mobile-img-container-light");
     for(i = 0 ; i<introText.length;i++){
-        introText[i].classList.toggle("intro-black");
+        introText[i].classList.toggle("intro-light");
     }
     for(i = 0 ; i<textBoxes.length;i++){
         textBoxes[i].classList.toggle("footer-light");
     }
-
-    
 });
 
     

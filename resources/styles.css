@@ -62,27 +62,35 @@ body{
 }
 
 /* Light dark mode switch */
-.toggle,#circle{
+.toggle, #circle{
     border-radius: 50px;
 }
+
 .toggle{
+    /* border: 1px solid white; */
+    opacity: 0;
+    animation-delay:3s ;
     position: relative;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    border: px solid black;
-    width: 5vw;
-    height: 5vh;
+    justify-content: space-around;
+    width: 6%;
+    height: 4%;
     background-color:#e79849;
     transition: all .1s linear;
 }
+
+/* Sun and moon icons */
 .mode{
     /* border: 1px solid black; */
-    height: 50%;
+    height: 70%;
+   
 }
 
+/* Circle for toggle */
 #circle{
     /* border:1px solid yellow; */
+    cursor: pointer;
     background-color:#e79849;
     position:absolute;
     left: 0;
@@ -91,8 +99,6 @@ body{
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     transition: all .1s linear;
 }
-
-
 
 /* navbar */
 .navbar{
@@ -153,8 +159,8 @@ body{
 }
 
 /* Animation for 'Hello!', description and navigation bar */
-.hello > span, .desc,.navbar{
-  opacity: 1;
+.hello > span, .desc,.navbar,.toggle{
+  opacity: 0;
   -webkit-animation-name:appears ;
   -moz-animation-name: appears;
   -o-animation-name: appears;
@@ -539,7 +545,7 @@ body{
     width: 13vw;
     background-size: cover;
     background-position:center;
-    background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQEGhZW3N92fWA/profile-displayphoto-shrink_800_800/0/1572886160038?e=2147483647&v=beta&t=hKWeq0Urjn1A7Tnz44uDimXzhWl3-bEM_tfqtEsQR0o');
+    background-image: url('../resources/images/selfie.jfif');
 }
   
 /* Container for music and skills */
@@ -807,7 +813,7 @@ button:active{
 /* footer */
 .footer{
     width: 100vw;
-    height: 8vh;
+    height: 10vh;
     background-color: rgb(57, 38, 73);
     display: flex;
     align-items: center;
@@ -1020,12 +1026,19 @@ button:active{
     }
 
     /* Home Page */
+    /* Toggle */
+    .toggle{
+        width: 15vw;
+        height: 7vw;    
+    }
+
     .home{
         /* border: 5px solid black; */
         justify-content: flex-end;
     }
 
     .intro{
+        /* border: 1px solid white; */
         height: 50vh;
         width: 75vw;
     }
@@ -1093,10 +1106,10 @@ button:active{
         position: absolute;
         right: 10%;
         top: -15%;
-        width: 60%;
-        height: 50%;
+        width: 40vw;
+        height: 25vh;
         box-shadow: 12px -10px 0px 0px rgba(235,128,21,1);
-        background-image: url('https://media-exp1.licdn.com/dms/image/C4D03AQEGhZW3N92fWA/profile-displayphoto-shrink_800_800/0/1572886160038?e=2147483647&v=beta&t=hKWeq0Urjn1A7Tnz44uDimXzhWl3-bEM_tfqtEsQR0o');
+        background-image: url('../resources/images/selfie.jfif');
         background-size: cover;
         background-position:center;
     }
@@ -1314,6 +1327,10 @@ button:active{
 
 /* Mobile Landscape */
 @media screen and (max-width:900px)  and (orientation:landscape){
+    .toggle{
+        width: 7vw;
+        height: 4vw;
+    }
     .prev, .next{
         display: none;
     }
@@ -1385,8 +1402,7 @@ button:active{
     }
 }
 
-/* New classes for later use */
-/* Bright mode */
+/* New classes for light mode */
 .white-background{
     background: white;
     transition: all .2s linear;
@@ -1396,34 +1412,35 @@ button:active{
     background-color: white;
 }
 
-span.name-color-change, .desc-mobile .name-color-change{
+span.name-light, .desc-mobile .name-light{
     color:#403f41;
     font-weight: 600;
 }
 
-.toggle-color-change{
+.toggle-light{
     background-color: #403f41;
 }
+
 #circle.toggle-right{
     transform: translateX(100%);
     background-color: black;
     transition: all .1s linear;
 }
-.colorchange, span.colorchange,svg.colorchange,.navbar > .colorchange{
+.font-light, span.font-light,svg.font-light,.navbar > .font-light{
     color:black;
 }
 
-.resume-color-change{
+.resume-light{
     background-color: black;
     color: white;
 }
 
 /* Project light mode */
-#projects.project-background-change, .about-black{
+#projects.projects-light, .contact-light{
     background-color: black;
 }
 
-.divider-one-black .shape-fill, .divider-two-black .shape-fill{
+.divider-one-light .shape-fill, .divider-two-light .shape-fill{
     fill:black;
 }
 
@@ -1432,7 +1449,7 @@ span.name-color-change, .desc-mobile .name-color-change{
 }
 
 /* About light mode */
-.about-gray{
+.about-light{
     background-color: #403f41;
     border-color: #403f41;
 }
@@ -1459,10 +1476,11 @@ span.name-color-change, .desc-mobile .name-color-change{
 }
 
 /* Mobile light */
-.intro-black{
+.intro-light{
     color: black;
 }
 
 .mobile-img-container-light{
     box-shadow: 12px -10px 0px 0px black;
 }
+
