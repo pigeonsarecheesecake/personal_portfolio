@@ -47,7 +47,7 @@ body{
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    height: 100%;
+    height: 100vh;
 }
 
 /* Home page */
@@ -114,6 +114,7 @@ body{
     /* backdrop-filter: blur(2px); */
     z-index: 1;
     letter-spacing: 2px;
+    transition: all .2s linear;
 }
 
 .navbar > a{
@@ -648,8 +649,9 @@ body{
 /* Contact Page */
 .contact{
     /* border: 1px solid yellow; */
-    background-color: rgb(116, 92, 133);;
+    background-color: rgb(116, 92, 133);
     flex-direction: row;
+    height: 80vh;
 }
 
 h2{
@@ -767,7 +769,7 @@ button{
     overflow: hidden;
     border: 0;
     border-radius: 40px;
-    height: 10%;
+    height: 30%;
     width: 40%;
     align-self: center;
     box-shadow: 6px 6px 0px 1px #eb8015;
@@ -995,11 +997,20 @@ button:active{
 
 /* Tablet portrait mode*/
 @media screen and (max-width:900px) {
+    .page{
+        height: 90vh;
+    }
     /* First curve divider */
     .divider-one{
         /* border: 1px solid black; */
         position: relative;
         top: 3px;
+    }
+
+    /* Toggle */
+    .toggle{
+        animation: none;
+        opacity: 1;
     }
 
     /* Navigation bar */
@@ -1011,7 +1022,7 @@ button:active{
         font-size: 2rem;
         border-radius: 0;
         width: 100%;
-        height: 8%;
+        height: 5%;
         margin-right: 0;
     }
     
@@ -1410,6 +1421,7 @@ button:active{
 
 .navigation-bar-light{
     background-color: white;
+    transition: all .2s linear;
 }
 
 span.name-light, .desc-mobile .name-light{
