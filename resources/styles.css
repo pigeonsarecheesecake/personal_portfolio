@@ -21,6 +21,9 @@ a{
 body{
     background: #3a2d44;
     color: white;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
     transition: all .2s linear;
 }
 
@@ -51,69 +54,19 @@ body{
 }
 
 /* Home page */
-.intro{
-    /* border: 1px solid black; */
-    width: 80vw;
-}
-
-/* Hidden mobile picture and description */
-.desc-mobile, .mobile-pic-container{
-    display: none;
-}
-
-/* Light dark mode switch */
-.toggle, #circle{
-    border-radius: 50px;
-}
-
-.toggle{
-    /* border: 1px solid white; */
-    opacity: 0;
-    animation-delay:3s ;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 6%;
-    height: 4%;
-    background-color:#e79849;
-    transition: all .1s linear;
-}
-
-/* Sun and moon icons */
-.mode{
-    /* border: 1px solid black; */
-    height: 70%;
-   
-}
-
-/* Circle for toggle */
-#circle{
-    /* border:1px solid yellow; */
-    cursor: pointer;
-    background-color:#e79849;
-    position:absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    transition: all .1s linear;
-}
-
-/* navbar */
+/* Navigation bar */
 .navbar{
     /* border: 5px solid blue; */
-    position: sticky;
-    top: 0;
     background-color: #3a2d44;
-    height: 7%;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* backdrop-filter: blur(2px); */
-    z-index: 1;
     letter-spacing: 2px;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
     transition: all .2s linear;
 }
 
@@ -132,25 +85,86 @@ body{
     font-size: 2rem;
 }
 
-/* Home page */
-/* Intro */
+/* Hidden mobile picture and description */
+.desc-mobile, .mobile-pic-container{
+    display: none;
+}
+
+/* Light dark mode switch */
+.toggle, #circle{
+    border-radius: 50px;
+}
+
+.toggle{
+    /* border: 1px solid white; */
+    animation-delay:3s ;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 6%;
+    height: 4%;
+    background-color:#e79849;
+    -webkit-transition: all .1s linear ;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+/* Sun and moon icons */
+.mode{
+    /* border: 1px solid black; */
+    height: 70%;
+}
+
+/* Circle for toggle */
+#circle{
+    /* border:1px solid yellow; */
+    cursor: pointer;
+    background-color:#e79849;
+    position:absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .1s linear;
+}
+
+/* Introduction */
 .intro{
     /* border: 1px solid purple; */
+    width: 80vw;
+    height:80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height:80%;
     -webkit-transform: translatez(-50px) scale(2) ;
     -moz-transform: translatez(-50px) scale(2);
     -o-transform: translatez(-50px) scale(2);
     transform: translatez(-50px) scale(2);
 }
 
-/* Hi there */
-.hello > span, .desc{
+/* Hello span */
+.hello > span{
+    font-size: 8rem;
     color: #C8C7D6;
     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
+}
+
+/* Text below Hello! */
+.desc{   
     margin-bottom: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 200;
+    letter-spacing: .3rem;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
 }
 
 /* Name Span */
@@ -159,28 +173,23 @@ body{
     color: #eb8015;
 }
 
-/* Animation for 'Hello!', description and navigation bar */
+/* Animation for 'Hello!', description, navigation bar, and toggle */
 .hello > span, .desc,.navbar,.toggle{
-  opacity: 0;
-  -webkit-animation-name:appears ;
-  -moz-animation-name: appears;
-  -o-animation-name: appears;
-  animation-name: appears;
+    opacity: 0;
+    -webkit-animation-name:appears ;
+    -moz-animation-name: appears;
+    -o-animation-name: appears;
+    animation-name: appears;
 
-  -webkit-animation-duration: 2.5;
-  -moz-animation-duration: 2.5s;
-  -o-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5;
+    -moz-animation-duration: 2.5s;
+    -o-animation-duration: 2.5s;
+    animation-duration: 2.5s;
 
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode:forwards;
-
-}
-
-.hello > span{
-    font-size: 8rem;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode:forwards;
 }
 
 #h{
@@ -190,34 +199,34 @@ body{
     animation-delay: 1s;
 }
 
-#i{
+#e{
     -webkit-animation-delay: 1.2s;
     -moz-animation-delay: 1.2s;
     -o-animation-delay:1.2s ;
     animation-delay: 1.2s;
 }
 
-#comma{
+#l{
     -webkit-animation-delay: 1.3s;
     -moz-animation-delay: 1.3s;
     -o-animation-delay: 1.3s;
     animation-delay: 1.3s;
 }
 
-#t{-webkit-animation-delay: 1.5s;
+#l2{-webkit-animation-delay: 1.5s;
     -moz-animation-delay: 1.5s;
     -o-animation-delay: 1.5s;
     animation-delay: 1.5s;
 }
 
-#h2{
+#o{
     -webkit-animation-delay: 1.6s;
     -moz-animation-delay: 1.6s;
     -o-animation-delay: 1.6s;
     animation-delay: 1.6s;
 }
 
-#e{
+#excl{
     -webkit-animation-delay: 1.7s;
     -moz-animation-delay: 1.7s;
     -o-animation-delay: 1.7s;
@@ -229,19 +238,6 @@ body{
     -moz-animation-delay: 3s;
     -o-animation-delay: 3s;
     animation-delay: 3s;
-}
-
-/* Greeting */
-.desc{
-    /* border: 1px solid red; */
-    font-size: 2rem;
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    -o-animation-delay: 3s;
-    animation-delay: 3s;
-    color: white;
-    font-weight: 200;
-    letter-spacing: .3rem;
 }
 
 /* Socials Container */
@@ -270,7 +266,7 @@ body{
     right: 0;
 }
 
-/* Resume */
+/* Resume and the animation to move it all the way to the left*/
 .res{
     -webkit-animation: moveEnd 2.5s 4s forwards ;
     -moz-animation: moveEnd 2.5s 4s forwards;
@@ -278,36 +274,7 @@ body{
     animation: moveEnd 2.5s 4s forwards;
 }
 
-/* LinkedIn */
-.li{
-    -webkit-animation: moveMiddle 2.5s 4s forwards;
-    -moz-animation: moveMiddle 2.5s 4s forwards;
-    -o-animation: moveMiddle 2.5s 4s forwards;
-    animation: moveMiddle 2.5s 4s forwards;
-}
-
-/* Customizing the svg, replaced fill in the html svg tag with currentcolor */
-.socials svg{
-    color: #ACA7C2;
-}
-
-.socials svg, .resume{
-    /* border: 1px solid black; */
-    -webkit-transition:color .5s ;
-    -moz-transition: color .5s;
-    -o-transition: color .5s;
-    transition: color .5s;
-    height: 4.2vw;
-    width: 4.2vw;
-    border-radius:80%;
-}
-
-.socials svg:hover{
-    color: rgb(209, 134, 73);
-}
-
-/* Resume */
-.resume {
+.resume-style {
     font-size: .8vw;
     display: flex;
     align-items: center;
@@ -320,11 +287,41 @@ body{
     transition: background-color .5s, color .5s;
 }
 
-.resume:hover{
+
+/* LinkedIn moves to the middle*/
+.li{
+    -webkit-animation: moveMiddle 2.5s 4s forwards;
+    -moz-animation: moveMiddle 2.5s 4s forwards;
+    -o-animation: moveMiddle 2.5s 4s forwards;
+    animation: moveMiddle 2.5s 4s forwards;
+}
+
+/* Replacing color for the svgs by using currentcolor*/
+.socials svg{
+    color: #ACA7C2;
+}
+
+/* Changes colors for socials and resume when cursor hovers on elements */
+.socials svg, .resume-style{
+    /* border: 1px solid black; */
+    -webkit-transition:all .5s ;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    height: 4.2vw;
+    width: 4.2vw;
+    border-radius:80%;
+}
+
+.socials svg:hover{
+    color: rgb(209, 134, 73);
+}
+
+.resume-style:hover{
     background-color: rgb(209, 134, 73);
 }
 
-/* Bottom Curve Divider */
+/* First curve divider obtained from https://www.shapedivider.app/ */
 .divider-one {
     /* border: 1px solid black; */
     position: absolute;
@@ -347,44 +344,38 @@ body{
 }
 
 /* Projects Page*/
+/* Projects header */
 .projects > h1{
-    position: absolute;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    width: 20%;
-    height: 10%;
-    border-radius: 20px;
+    padding: .5rem;
+    width: 100%;
+    position: absolute;
     position: absolute;
     top: 8%;
-    z-index: 0;
 }
 
-    
 .projects{
-     /* border: 2px solid white; */
-     background-color: rgb(116, 92, 133);
-     text-shadow: -3px 10px 10px rgba(0,0,0,0.2);
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
+    /* border: 2px solid white; */
+    background-color: rgb(116, 92, 133);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-/* Blob design behind slides */
+/* Blob design one behind slides */
 .blob{
     position: absolute;
     z-index: -2;
     opacity: .2;
+    color: #E8DAFF;
 }
 
 /* Slides */
 .slide{
     /* border: 2px solid red; */
-    border-radius: 50px;
     margin:2rem;
     height: 60%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -399,15 +390,11 @@ body{
     animation-duration: 1.5s;
 }
 
-/* Projects heading behind slides */
-
 /* Project image container */
 .img-container{
-    position: relative;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     border: 5px solid #eb8015;
-    border-radius: 20px;
-    width:52vw;
+    width:90%;
     height: 80%;
     background-size: cover;
     background-position:top;
@@ -429,7 +416,6 @@ body{
     border: 3px solid #eb8015;
     width: 20%;
     height: 10%;
-    border-radius: 50px;
     margin-bottom: 1rem;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
     text-align: center;
@@ -442,7 +428,7 @@ body{
 
 /* Arrows to switch slides */
 .prev,.next{
-    padding: 1rem;
+    padding: 1%;
     font-size: 6rem;
     cursor: pointer;
     -webkit-transition:opacity .5s ;
@@ -456,7 +442,7 @@ body{
 }
 
 /* About Page */
-/* Page divider 2 */
+/* Page divider 2 obtained from https://www.shapedivider.app/*/
 .divider-two {
     position: absolute;
     z-index: -1;
@@ -491,10 +477,9 @@ body{
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
-    font-weight: 200;
 }
 
-/* Content Container */
+/* About page content Container */
 .container{
     /* border: 1px solid blue; */
     display:flex;
@@ -504,7 +489,7 @@ body{
     height:80%;
   }
   
-/* About h1 */
+/* About header */
 .abouth1{
     /* border: 1px solid black; */
     height: 100%;
@@ -516,7 +501,6 @@ body{
 
 /* Bio and miscellaneous(music and skills) */
 .bio, .misc > *{
-    border-radius:10px;
     height: 50%;
     background-color: rgb(129, 118, 141);
     border-left: 5px solid #eb8015;
@@ -524,7 +508,6 @@ body{
   
 .bio{
     /* border: 1px solid black; */
-    border-radius:10px;
     margin-right: 1rem;
     width: 20%;
     height: 90%;
@@ -536,6 +519,18 @@ body{
     display: flex;
     justify-content:center;
     align-items:center;
+}
+
+/* Facts about me */
+.about-me{
+    /* border: 1px solid red; */
+    padding: 0 1rem 1rem 1rem ;
+    align-items: flex-start;
+    font-size: .9rem;
+}
+
+.about-me > *{
+    margin:.5rem;
 }
   
 /* Picture of me*/
@@ -564,23 +559,11 @@ body{
     align-items: center;
     justify-content: space-around;  
     width:100%;
-}
-
-/* Facts about me */
-.about-me{
-    /* border: 1px solid red; */
-    padding: 0 1rem 1rem 1rem ;
-    align-items: flex-start;
-    font-size: .9rem;
-}
-
-.about-me > *{
-    margin:.5rem;
+    height: 49%;
 }
 
 /* Skills/languages */
 .skills{
-    height: 47%;
     width: 100%;
     flex-direction: column;
 }
@@ -607,6 +590,7 @@ body{
     transition: all 1s;
 }
 
+/* Brings the skills up a little bit when cursor hovers */
 .skill:hover{
     -webkit-transform:all 1s ;
     -moz-transform:all 1s ;
@@ -654,6 +638,7 @@ body{
     height: 80vh;
 }
 
+/* Contact header */
 h2{
     font-size: 2.25rem;
     position: absolute;
@@ -689,6 +674,7 @@ h2{
     align-self: center;
 }
 
+/* Orange line decorations */
 .line-deco{
     /* border: 1px solid red; */
     background-color: #eb8015;
@@ -705,9 +691,9 @@ form{
     /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
-    z-index: 1;
     width: 50%;
     height: 60%;
+    z-index: 1;
     display: flex;
     flex-direction: column;
 }
@@ -715,7 +701,6 @@ form{
 input, textarea{
     color: white;
     border: 2px solid #eb8015;
-    border-radius: 10px;
     background-color: rgb(129, 118, 141);
 }
 
@@ -768,7 +753,6 @@ button{
     cursor: pointer;
     overflow: hidden;
     border: 0;
-    border-radius: 40px;
     height: 30%;
     width: 40%;
     align-self: center;
@@ -886,8 +870,6 @@ button:active{
         font-size: 7rem;
     }
 
-   
-
     .about-me{
         font-size: .8rem;
     }
@@ -896,24 +878,27 @@ button:active{
 
 /* Tablet*/
 @media screen and (max-width:1180px){
+    /* Brings intro closer to the screen */
+    .wrapper{
+        perspective: 70px;
+    }
+    
+    /* Intro resized */
+    .intro{
+        position: absolute;
+        top: 10%;
+        z-index: 0;
+        width: 70%;
+    }
+
     /* Divider 2 */
     .divider-two{
         top:-10px;
     }
 
-    /* Brings intro closer to the screen */
-    .wrapper{
-        perspective: 70px;
-    }
-
-    /* Intro resized */
-    .intro{
-        width: 70%;
-    }
-
-    /* Space for navbar */
-    .navbar{
-        margin-right: 5rem;
+    /* Projects */
+    .img-container{
+        height: 60%;
     }
 
     /* Font size adjustments */
@@ -937,8 +922,6 @@ button:active{
         font-size: 4rem;
     }
 
-   
-
     .about-me{
         font-size: .6rem;
     }
@@ -952,16 +935,12 @@ button:active{
         color: #ACA7C2;
     }
 
-   .resume:hover{
-    background-color: #ACA7C2;;
+   .resume-style:hover{
+        background-color: #ACA7C2;;
     }
 
    .prev:hover,.next:hover{
         opacity: 1;
-    }
-
-   .img-container{
-        height: 60%;
     }
 
    .skill:hover{
@@ -973,12 +952,13 @@ button:active{
 
    /* Removes button styles */
     button::before{
-            content: none;
-        }
+        content: none;
+    }
 
     button{
         box-shadow: none;
         appearance: none;
+        -webkit-tap-highlight-color: #3a2d44;
     }
 
     button:active{
@@ -988,18 +968,18 @@ button:active{
         transform: translate(0) ;
     }
 
-    button{
-        height: 30%;
-        -webkit-tap-highlight-color: #3a2d44;
+    form{
+        height: 65%;
     }
 }
 
-
 /* Tablet portrait mode*/
 @media screen and (max-width:900px) {
+    /* Readjusts all pages */
     .page{
         height: 90vh;
     }
+
     /* First curve divider */
     .divider-one{
         /* border: 1px solid black; */
@@ -1007,8 +987,16 @@ button:active{
         top: 3px;
     }
 
+    /* Home page */
+    .home{
+        /* border: 5px solid black; */
+        justify-content: flex-end;
+    }
+
     /* Toggle */
     .toggle{
+        width: 15vw;
+        height: 7vw;    
         animation: none;
         opacity: 1;
     }
@@ -1017,7 +1005,6 @@ button:active{
     .navbar{
         /* border: 1px solid black; */
         padding: 1rem;
-        position: sticky;
         opacity: 1;
         font-size: 2rem;
         border-radius: 0;
@@ -1036,20 +1023,9 @@ button:active{
         font-size: 2rem;
     }
 
-    /* Home Page */
-    /* Toggle */
-    .toggle{
-        width: 15vw;
-        height: 7vw;    
-    }
-
-    .home{
-        /* border: 5px solid black; */
-        justify-content: flex-end;
-    }
-
     .intro{
         /* border: 1px solid white; */
+        top: 40%;
         height: 50vh;
         width: 75vw;
     }
@@ -1064,7 +1040,7 @@ button:active{
         animation: none;
         opacity: 1;
         width: 60%;
-        height: 15%;
+        height: 20%;
         box-shadow: none ;
         align-self: flex-end;
         display: flex;
@@ -1079,12 +1055,12 @@ button:active{
         height: 6rem;
     }
 
-    .socials svg, .resume{
+    .socials svg, .resume-style{
         height: 100%;
         width: 100%;
     }
 
-    .resume{
+    .resume-style{
         font-size: 1rem;
     }
 
@@ -1110,7 +1086,7 @@ button:active{
         font-weight: 200;
     }
 
-    /* Picture on home page */
+    /* Picture on home page for portrait tablet and mobile*/
     .mobile-pic-container{
         /* border: 1px solid red; */
         display: block;
@@ -1135,27 +1111,10 @@ button:active{
         flex-direction: row;
     }
 
-    .img-container::after{
-        display: none;
-    }
-
     .slide{
         width: 80%;
         height: 40%;
         margin: 0 .5rem;
-    }
-
-    .img-container{
-        border-radius: 0;
-        box-shadow: none;
-        border: none;
-        width: 100%;
-        height: 100%;
-        margin-bottom: 0;
-    }
-
-    .prev,.next{
-        display: flex;
     }
 
     .text-box{
@@ -1165,6 +1124,18 @@ button:active{
         border-radius: 0;
         border: 20px;
         background-color: #e6b17c;
+    }
+
+    .img-container{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .prev,.next{
+        display: flex;
     }
 
     /* About */
@@ -1184,18 +1155,6 @@ button:active{
         display: none;
     }
 
-    .about-me{
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-
-    .misc{
-        /* border: 1px solid navajowhite; */
-        width: 100%;
-        height: 25%;
-    }
-
     .bio{
         width: 100%;
         height: 40%;
@@ -1204,8 +1163,17 @@ button:active{
     }
 
     .about-me{
+        /* border: 1px solid white; */
+        display: flex;
+        align-items: center;
+        height: 100%;
         font-size: 1.5rem;
+    }
+
+    .misc{
+        /* border: 1px solid navajowhite; */
         width: 100%;
+        height: 25%;
     }
 
     /* Skills */
@@ -1229,12 +1197,13 @@ button:active{
         display: none;
     }
 
+    /* Contact page */
     .contact h2{
         font-size: 4rem ;
         position: absolute;
         top: 15%;
         left: 0;
-        margin-left: 2rem;
+        margin-left: 10%;
     }
     
     .contactFields{
@@ -1279,7 +1248,7 @@ button:active{
         height: 2.5rem;
     }
 
-    .resume{
+    .resume-style{
         font-size: .5rem;
     }
     
@@ -1321,7 +1290,6 @@ button:active{
     }
 
     /* Contact Page */
-    /* H2 Contact */
     .contact h2{
         font-size: 2rem;
     }
@@ -1338,45 +1306,43 @@ button:active{
 
 /* Mobile Landscape */
 @media screen and (max-width:900px)  and (orientation:landscape){
-    .toggle{
-        width: 7vw;
-        height: 4vw;
-    }
-    .prev, .next{
-        display: none;
-    }
-    .projects{
-        flex-direction: column;
-    }
-    .slide{
-        height: 30%;
-        width: 60%;
-    }
-    .navbar{
-        font-size: 1rem;
-    }
-    .navbar>a:hover{
-        font-size: 1rem;
-    }
     .page{
         height: 200vh;
     }
 
+    /* Home page */
+    .home{
+        height: 100vh;   
+    }
+
     .navbar{
+        font-size: 1rem;
         height: 20%;
     }
 
-    .home{
-        height: 110vh;   
+    .navbar>a:hover{
+        font-size: 1rem;
     }
     
+    .toggle{
+        width: 8vw;
+        height: 4vw;
+    }
+
     .intro{
         justify-content: center;
     }
 
-   .resume{
+   .resume-style{
         font-size: .5rem;
     }
+
+    .socials{
+        /* border: 1px solid black; */
+        width: 50%;
+        height: 30%;
+        bottom: 50px;
+    }  
    
    .socials > a {
         height: 3rem;
@@ -1394,15 +1360,23 @@ button:active{
 
     .mobile-pic-container{
         display: none;
+    } 
+
+    /* Projects page */
+    .prev, .next{
+        display: none;
     }
 
-    .socials{
-        /* border: 1px solid black; */
-        width: 50%;
-        height: 30%;
-        bottom: 50px;
-    }    
+    .projects{
+        flex-direction: column;
+    }
 
+    .slide{
+        height: 30%;
+        width: 60%;
+    }
+
+    /* About page */
     .about-me{
         font-size: 1rem;
     }
@@ -1416,11 +1390,9 @@ button:active{
 /* New classes for light mode */
 .white-background{
     background: white;
-    transition: all .2s linear;
-}
-
-.navigation-bar-light{
-    background-color: white;
+    -webkit-transition: all .2s linear ;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
     transition: all .2s linear;
 }
 
@@ -1436,6 +1408,9 @@ span.name-light, .desc-mobile .name-light{
 #circle.toggle-right{
     transform: translateX(100%);
     background-color: black;
+    -webkit-transition: all .1s linear ;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
     transition: all .1s linear;
 }
 .font-light, span.font-light,svg.font-light,.navbar > .font-light{
@@ -1447,7 +1422,7 @@ span.name-light, .desc-mobile .name-light{
     color: white;
 }
 
-/* Project light mode */
+
 #projects.projects-light, .contact-light{
     background-color: black;
 }
@@ -1460,7 +1435,7 @@ span.name-light, .desc-mobile .name-light{
     border-color: white;
 }
 
-/* About light mode */
+
 .about-light{
     background-color: #403f41;
     border-color: #403f41;
@@ -1480,19 +1455,21 @@ span.name-light, .desc-mobile .name-light{
     color: black;
 }
 
-/* Footer */
 .footer-light{
     background-color: white;
     color: black;
     
 }
 
-/* Mobile light */
 .intro-light{
     color: black;
 }
 
 .mobile-img-container-light{
     box-shadow: 12px -10px 0px 0px black;
+}
+
+.blobs-light{
+    color: white;
 }
 

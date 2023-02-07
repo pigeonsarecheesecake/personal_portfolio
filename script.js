@@ -42,7 +42,7 @@ let letter = document.querySelectorAll(".hello > span");
 let social = document.querySelectorAll(".socials svg");
 let fullName = document.querySelector(".desc > span");
 let description = document.getElementsByClassName("desc");
-let resume = document.getElementsByClassName("resume");
+let resume = document.getElementsByClassName("resume-style");
 let navigation = document.querySelectorAll(".navbar > a");
 let navigationBar = document.querySelector(".navbar");
 
@@ -75,6 +75,9 @@ let nameSpan = document.querySelector(".desc-mobile span");
 let portraitShadow = document.querySelector(".mobile-pic-container");
 let textBoxes = document.querySelectorAll(".text-box");
 
+// Blobs
+let blobs = document.querySelectorAll(".blob");
+
 // Using classlist to toggle between classes
 ball.addEventListener("click", function(){
     // Moving ball to the right and changes color between modes
@@ -86,7 +89,7 @@ ball.addEventListener("click", function(){
     description[0].classList.toggle("font-light");
     resume[0].classList.toggle("resume-light");
     fullName.classList.toggle("name-light");
-    navigationBar.classList.toggle("navigation-bar-light");
+    navigationBar.classList.toggle("white-background");
     // Changing "hello" spans color
     for(let i = 0; i<letter.length ; i++){
         letter[i].classList.toggle("font-light");
@@ -139,6 +142,11 @@ ball.addEventListener("click", function(){
     }
     for(i = 0 ; i<textBoxes.length;i++){
         textBoxes[i].classList.toggle("footer-light");
+    }
+    
+    // Blobs
+    for(i = 0 ; i<blobs.length;i++){
+        blobs[i].classList.toggle("blobs-light");
     }
 });
 
