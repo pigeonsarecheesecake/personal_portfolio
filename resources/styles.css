@@ -710,7 +710,7 @@ input{
 }
 
 textarea{
-    height: 30%;
+    min-height: 30%;
     margin-bottom: 3rem;
 }
 
@@ -753,7 +753,7 @@ button{
     cursor: pointer;
     overflow: hidden;
     border: 0;
-    height: 30%;
+    min-height: 10%;
     width: 40%;
     align-self: center;
     box-shadow: 6px 6px 0px 1px #eb8015;
@@ -1186,13 +1186,12 @@ button:active{
         width: 100%;
         height: 100%;
     }
-
+    
     .skill{
         /* border: 1px solid black; */
         width: 5rem;
         height: 5rem;
     }
-    
     .letsConnect{
         display: none;
     }
@@ -1226,7 +1225,7 @@ button:active{
 }
 
 /* Mobile */
-@media screen and (max-width:720px){
+@media screen and (max-width:767px){
     /* Navigation bar */
     .navbar{
         font-size: 1rem;
