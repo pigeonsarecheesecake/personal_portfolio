@@ -179,7 +179,7 @@ body{
 
 /* Animation for 'Hello!', description, navigation bar, and toggle */
 .hello > span, .desc,.navbar,.toggle{
-    opacity: 1;
+    opacity: 0;
     -webkit-animation-name:appears ;
     -moz-animation-name: appears;
     -o-animation-name: appears;
@@ -256,7 +256,7 @@ body{
     -o-animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     animation: wexpand 2.5s 4s forwards, appears 3s 4s forwards;
     width: 5.8vw;
-    height: 5.8vw;
+    min-height: 5.8vw;
     opacity: 0;
 }
 
