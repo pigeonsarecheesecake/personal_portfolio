@@ -602,6 +602,10 @@ body{
     transform: translateY(-20px);
 }
 
+#react{
+    background-image: url(../resources/images/skills/react.png);
+}
+
 #css{
     background-image: url(../resources/images/skills/css3-logo-png-transparent.png);
 }
